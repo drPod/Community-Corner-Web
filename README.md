@@ -17,5 +17,8 @@ Currently, two official plugins are available:
 - [Wix Site 2](https://businesschronicle.wixsite.com/communitychronicle)
 - [Union International](https://theunioninternational.com/)
 - [Google Drive](https://drive.google.com/drive/folders/1pYGtkFXkisQxb5doSx2mTX96_1SwoW-O?usp=sharing)
+- [Production Link](https://community-corner-web.vercel.app)
+- [React Documentation](https://react.dev)
+- [Vite Documentation](https://vitejs.dev)
 
 Happy Coding!
