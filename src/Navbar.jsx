@@ -15,10 +15,10 @@ const Navbar = () => {
     return (
         <div className="unique-navbar-container">
             <div className="unique-navbar-top">
-                <span>{currentDate}</span>
-                <a href="#" className="unique-navbar-logo-link">
-                    <img src={logo} alt="Community Corner Logo" />
-                </a>
+                <span className="date">{currentDate}</span>
+                <div className="logo-container">
+                    <img src={logo} alt="Community Corner Logo" className="unique-navbar-logo" />
+                </div>
                 <div className="unique-navbar-icons">
                     <a href="#" title="Instagram">
                         <FontAwesomeIcon icon={faInstagram} />
@@ -29,23 +29,22 @@ const Navbar = () => {
                     <a href="#" title="Spotify">
                         <FontAwesomeIcon icon={faSpotify} />
                     </a>
+                    <a href="#" title="Search">
+                        <FontAwesomeIcon icon={faSearch} />
+                    </a>
                 </div>
-                <a href="#" className="unique-navbar-signin">SIGN IN / JOIN</a>
             </div>
             <div className="unique-navbar-bottom">
-                <a href="#" className="unique-navbar-button">ABOUT</a>
-                <a href="#" className="unique-navbar-button">NEWS</a>
-                <a href="#" className="unique-navbar-button">CULTURE</a>
-                <a href="#" className="unique-navbar-button">OPINION</a>
-                <a href="#" className="unique-navbar-button">PODCAST</a>
-                <a href="#" className="unique-navbar-button">CONFERENCE</a>
-                <a href="#" className="unique-navbar-button">
-                    <FontAwesomeIcon icon={faSearch} />
-                </a>
+                <a href="#">ABOUT</a>
+                <a href="#">NEWS</a>
+                <a href="#">CULTURE</a>
+                <a href="#">OPINION</a>
+                <a href="#">PODCAST</a>
+                <a href="#">CONFERENCE</a>
+                <button>SIGN IN / JOIN</button>
             </div>
         </div>
     );
-}
+};
 
 export default Navbar;
-

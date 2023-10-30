@@ -1,0 +1,16 @@
+/* Homepage.css */
+.homepage-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    gap: 20px;
+}
+
+.left-section, .center-section, .right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.homepage-container {
+    padding-top: 30px;
+}
