@@ -10,12 +10,16 @@
 .date {
     display: flex;
     justify-content: left;
+    font-size: 20pt;
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+    font-weight: bold;
 }
 
 .logo-container {
     display: flex;
     justify-content: center;
-    flex: 2;
+    flex: 1;
 }
 
 .unique-navbar-top {
