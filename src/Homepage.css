@@ -2,15 +2,32 @@
 .homepage-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr; 
-    gap: 20px;
+    gap: 30px;
 }
 
 .left-section, .center-section, .right-section {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+}
+
+.right-section {
+    margin-left: 80px;
 }
 
 .homepage-container {
     padding-top: 30px;
+}
+
+.center-bottom {
+    margin: auto;
+    padding: 20px;
+    background-color: #A2AEDA;
+    box-shadow: 20px -20px 30px #797B83, -20px 20px 30px #797B83;
+    margin-top: 40px;
+    transform: translate(0, 50%);
+}
+
+.center-title {
+    color: aliceblue;
+    text-decoration: underline;
 }

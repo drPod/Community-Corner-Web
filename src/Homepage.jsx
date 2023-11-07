@@ -30,13 +30,14 @@ function Homepage() {
             </div>
             <div className="center-section">
             <div className="center-section">
-                <div className="center-top">
+                {/* <div className="center-top">
                     <img src={reactLogo} alt="The Union logo" className="center-logo"/>
                     <h2 className="center-title">APPLY TO JOIN THE UNION 2023-24 STAFF</h2>
                     <h3 className="center-subtitle">CONFERENCE NEWS</h3>
-                </div>
+                </div> */}
                 <div className="center-bottom">
                     <h1 className="center-big-title">THE UNION IS RECRUITING! 2023-24 Academic Year</h1>
+                    <h2 className="center-title">APPLY TO JOIN THE UNION STAFF</h2>
                     <p className="center-description">
                         Calling all existing and new members! Sign up now to join The Union 2023-24 Staff. New members: sign up to join as a staff member. Existing members: sign up to renew your interest in The Union, and apply for executive positions if you're interested. CLOSES OCTOBER 1, 2023 (Sunday) ...
                     </p>
