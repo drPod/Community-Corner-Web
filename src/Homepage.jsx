@@ -6,27 +6,33 @@ function Homepage() {
     return (
         <div className="homepage-container">
             <div className="left-section">
-                <NewsIcon 
-                    picture={reactLogo}
-                    articleType="NEWS"
-                    author="Maysnarii Chotbunwong"
-                    releaseDate="May 23, 2023"
-                    title="Join the first cohort of UNITE Young Leaders"
-                />
-                <NewsIcon 
-                    picture={reactLogo}
-                    articleType="NEWS"
-                    author="Jia Lee"
-                    releaseDate="May 3, 2023"
-                    title="Roald Dahl’s Books Rewritten"
-                />
-                <NewsIcon 
-                    picture={reactLogo}
-                    articleType="NEWS"
-                    author="Naphat (Belle) Chonpangsaong"
-                    releaseDate="May 2, 2023"
-                    title="Living in a Box: Exploring Hong Kong’s Coffin Homes Amidst the Housing Crisis"
-                />
+                <div class="article">
+                    <NewsIcon 
+                        picture={reactLogo}
+                        articleType="NEWS"
+                        author="Maysnarii Chotbunwong"
+                        releaseDate="May 23, 2023"
+                        title="Join the first cohort of UNITE Young Leaders"
+                    />
+                </div>
+                <div class="article">
+                    <NewsIcon 
+                        picture={reactLogo}
+                        articleType="NEWS"
+                        author="Jia Lee"
+                        releaseDate="May 3, 2023"
+                        title="Roald Dahl’s Books Rewritten"
+                    />
+                </div>
+                <div class="article">
+                    <NewsIcon 
+                        picture={reactLogo}
+                        articleType="NEWS"
+                        author="Naphat (Belle) Chonpangsaong"
+                        releaseDate="May 2, 2023"
+                        title="Living in a Box: Exploring Hong Kong’s Coffin Homes Amidst the Housing Crisis"
+                    />
+                </div>
             </div>
             <div className="center-section">
             <div className="center-section">
@@ -46,20 +52,24 @@ function Homepage() {
             </div>
             </div>
             <div className="right-section">
-                <NewsIcon 
-                    picture={reactLogo}
-                    articleType="NEWS"
-                    author="Alysha (Alice) Simic"
-                    releaseDate="January 2, 2023"
-                    title="The Ethics of Dispersing Protests: Examining the Morality of Using Force to Break Up Demonstrations"
-                />
-                <NewsIcon 
-                    picture={reactLogo}
-                    articleType="NEWS"
-                    author="Giulia Pession"
-                    releaseDate="January 1, 2023"
-                    title="Should Children Worry about Censorship? Examining the Implications of Restricting Information for Young Minds through Winnie the Pooh"
-                />
+                <div class="article">
+                    <NewsIcon 
+                        picture={reactLogo}
+                        articleType="NEWS"
+                        author="Alysha (Alice) Simic"
+                        releaseDate="January 2, 2023"
+                        title="The Ethics of Dispersing Protests: Examining the Morality of Using Force to Break Up Demonstrations"
+                    />
+                </div>
+                <div class="article">
+                    <NewsIcon 
+                        picture={reactLogo}
+                        articleType="NEWS"
+                        author="Giulia Pession"
+                        releaseDate="January 1, 2023"
+                        title="Should Children Worry about Censorship? Examining the Implications of Restricting Information for Young Minds through Winnie the Pooh"
+                    />
+                </div>
             </div>
         </div>
     );

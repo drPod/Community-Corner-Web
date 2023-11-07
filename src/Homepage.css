@@ -24,10 +24,17 @@
     background-color: #A2AEDA;
     box-shadow: 20px -20px 30px #797B83, -20px 20px 30px #797B83;
     margin-top: 40px;
-    transform: translate(0, 50%);
+    transform: translate(8%, 50%);
 }
 
 .center-title {
     color: aliceblue;
     text-decoration: underline;
+}
+
+.article {
+    margin: 10px;
+    padding: 20px;
+    border: 3px solid black;
+    box-shadow: 5px 5px 5px #797B83, -5px -5px 5px #797B83;
 }
