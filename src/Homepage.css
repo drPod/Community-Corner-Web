@@ -21,7 +21,8 @@
 .center-bottom {
     margin: auto;
     padding: 20px;
-    background-color: #A2AEDA;
+    /* background-color: #A2AEDA; */
+    background-color: #5EEA73;
     box-shadow: 20px -20px 30px #797B83, -20px 20px 30px #797B83;
     margin-top: 40px;
     transform: translate(8%, 50%);

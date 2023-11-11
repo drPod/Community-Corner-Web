@@ -29,8 +29,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #EDE8E7;
+  /* background-color: #EDE8E7; */
+  background-color: rgba(255, 255, 255, 1);
   color: #000000;
+  /* background-image: url("assets/Logo.png"); */
 }
 
 h1 {
