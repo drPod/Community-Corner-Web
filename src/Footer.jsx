@@ -12,7 +12,14 @@ function Footer() {
                 <h1>ommunity Corner</h1>
             </div>
             <div>
-                
+                <div class="links">
+                    <a href="#">ABOUT</a>
+                    <a href="#">NEWS</a>
+                    <a href="#">CULTURE</a>
+                    <a href="#">OPINION</a>
+                    <a href="#">PODCAST</a>
+                    <a href="#">CONFERENCE</a>
+                </div>
             </div>
             
         </div>
