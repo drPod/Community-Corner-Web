@@ -1,4 +1,20 @@
 .footer-section{
     background-color: #5EEA73;
-    width: 100%;
+    width: 116%;
+    height: 500px;
+    transform: translateX(-7%);
+    height: 100%;
+    padding: 10px;
+    margin: none;
+
+}
+
+.logo-footer{
+    width: 100px;
+}
+
+
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transform: translateX(-10px);
 }

@@ -7,7 +7,14 @@ import logo from './assets/Logo.png';
 function Footer() {
     return (
         <div class="footer-section">
-            <h1>This is the footer</h1>
+            <div class="logo-container">
+                <img class="logo-footer" src={logo} />
+                <h1>ommunity Corner</h1>
+            </div>
+            <div>
+                
+            </div>
+            
         </div>
     )
 }
