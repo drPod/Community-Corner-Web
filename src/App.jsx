@@ -3,6 +3,7 @@ import './App.css'
 import '../tailwind.config'; 
 import Navbar from './Navbar';
 import Homepage from './Homepage';
+import Footer from './Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Footer />
     </div>
   )
 }
