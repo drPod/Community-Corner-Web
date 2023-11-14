@@ -1,5 +1,5 @@
 .footer-section{
-    background-color: #5EEA73;
+    background-color: #53B161;
     width: 116%;
     height: 600px;
     transform: translateX(-7%);
@@ -20,10 +20,34 @@ h1{
     transform: translateX(-10px);
 }
 
-.links {
+.footer-headings, .links-div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin: none;
+}
+
+.footer-headings {
+    font-size: 20pt;
+}
+
+.social-media{
+    display: flex;
+    gap: 40px;
     align-items: center;
-    width: 90%; /* Adjust based on your design preference */
-    margin: 20px auto;
+}
+
+.social-media-icon{
+    font-size: 30pt;
+    color: white;
+}
+
+.links-div{
+    transform: translateY(-20px);
+}
+.link{
+    color: black;
+}
+
+#extra, #extra-2, #extra-3{
+    color: #53B161;
 }

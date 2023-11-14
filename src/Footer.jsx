@@ -12,13 +12,69 @@ function Footer() {
                 <h1>ommunity Corner</h1>
             </div>
             <div>
-                <div class="links">
-                    <a href="#">ABOUT</a>
-                    <a href="#">NEWS</a>
-                    <a href="#">CULTURE</a>
-                    <a href="#">OPINION</a>
-                    <a href="#">PODCAST</a>
-                    <a href="#">CONFERENCE</a>
+                <div class="footer-headings">
+                    <h3>Section</h3>
+                    <h3>About</h3>
+                    <h3>Get Involved</h3>
+                    <div class="social-media">
+                        <a href="#" title="Instagram" class="social-media-icon">
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                        <a href="#" title="Facebook" class="social-media-icon">
+                            <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                        <a href="#" title="Spotify" class="social-media-icon">
+                            <FontAwesomeIcon icon={faSpotify} />
+                        </a>
+                    </div>
+                </div>
+                <div class="links-div">
+                    <a href="#" class="link">NEWS</a>
+                    <a href="#" class="link">ABOUT US</a>
+                    <a href="#" class="link">JOIN OUR TEAM</a>
+                    <div class="social-media">
+                        <a href="#" title="Instagram" class="social-media-icon" id="extra">
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                        <a href="#" title="Facebook" class="social-media-icon" id="extra-2">
+                            <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                        <a href="#" title="Spotify" class="social-media-icon" id="extra-3">
+                            <FontAwesomeIcon icon={faSpotify} />
+                        </a>
+                    </div>
+                </div>
+                <div class="links-div">
+                    <a href="#" class="link">CULTURE</a>
+                    <a href="#" class="link">CONTACT US</a>
+                    <a href="#" class="link">ADVERTISE</a>
+                    <div class="social-media">
+                        <a href="#" title="Instagram" class="social-media-icon" id="extra">
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                        <a href="#" title="Facebook" class="social-media-icon" id="extra-2">
+                            <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                        <a href="#" title="Spotify" class="social-media-icon" id="extra-3">
+                            <FontAwesomeIcon icon={faSpotify} />
+                        </a>
+                    </div>
+                </div>
+                <div class="links-div">
+                    <a href="#" class="link">OPINION</a>
+                    <a href="#" class="link">CONFERENCE</a>
+                    <a href="#" class="link">PODCAST</a>
+                    <div class="social-media">
+                        <a href="#" title="Instagram" class="social-media-icon" id="extra">
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                        <a href="#" title="Facebook" class="social-media-icon" id="extra-2">
+                            <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                        <a href="#" title="Spotify" class="social-media-icon" id="extra-3">
+                            <FontAwesomeIcon icon={faSpotify} />
+                        </a>
+                    </div>
                 </div>
             </div>
             
