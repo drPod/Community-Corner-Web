@@ -36,11 +36,13 @@ function Homepage() {
             </div>
             <div className="center-section">
             <div className="center-section">
-                {/* <div className="center-top">
-                    <img src={reactLogo} alt="The Union logo" className="center-logo"/>
+                <div className="center-top">
+                    <h1 class="title">Community Corner</h1>
+                    {/* <img src={reactLogo} alt="The Union logo" className="center-logo"/>
                     <h2 className="center-title">APPLY TO JOIN THE UNION 2023-24 STAFF</h2>
-                    <h3 className="center-subtitle">CONFERENCE NEWS</h3>
-                </div> */}
+                    <h3 className="center-subtitle">CONFERENCE NEWS</h3> */}
+                    <p class="title-p">——Student Run News Organization. Filled with thousands of meaningful and unique articles for your everyday knowledge, enjoyment, and ease!</p>
+                </div>
                 <div className="center-bottom">
                     <h1 className="center-big-title">THE UNION IS RECRUITING! 2023-24 Academic Year</h1>
                     <h2 className="center-title">APPLY TO JOIN THE UNION STAFF</h2>
