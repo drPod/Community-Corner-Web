@@ -72,7 +72,24 @@ function Homepage() {
                         title="Should Children Worry about Censorship? Examining the Implications of Restricting Information for Young Minds through Winnie the Pooh"
                     />
                 </div>
+                
             </div>
+            <div class="extra">
+            <div class="popular">
+                <h1 class="popular-heading">Popular</h1>
+                    <NewsIcon
+                        picture={reactLogo}
+                        title="Enter title here"
+                    />
+                </div>
+                <div class="recent">
+                    <h1 class="recent-heading">Recent</h1>
+                        <NewsIcon
+                            picture={reactLogo}
+                            title="Enter title here" />
+                </div>
+            </div>
+            
         </div>
     );
 }

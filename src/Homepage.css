@@ -18,6 +18,10 @@
     padding-top: 30px;
 }
 
+.extra{
+    display: flex;
+}
+
 .center-bottom {
     margin: auto;
     padding: 20px;
@@ -53,4 +57,21 @@
     padding: 20px;
     border: 3px solid black;
     box-shadow: 5px 5px 5px #797B83, -5px -5px 5px #797B83;
+}
+
+.popular-heading{
+    background-color: #53B161;
+    margin-top: none;
+    width: 100%;
+}
+
+.popular{
+    border: 2px solid black;
+    width: 300%;
+    padding: 10px;
+    float: left;
+}
+
+.recent{
+    float: right;
 }
