@@ -97,6 +97,18 @@ function Homepage() {
                 </div>
                     
                 </div>
+                <h1 class="popular-heading">Recents</h1>
+                <div class="recents">
+                    <div class="article">
+                        <NewsIcon
+                        picture={reactLogo}
+                        articleType="NEWS"
+                        author="author name"
+                        releaseDate="N/A"
+                        title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    />
+                    </div>
+                </div>
             </div>
         </div>
     );
