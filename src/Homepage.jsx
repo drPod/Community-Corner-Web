@@ -74,29 +74,30 @@ function Homepage() {
                 </div>
                 
             </div>
-            {/* <div class="extra">
+            <div class="extra">
+            <h1 class="popular-heading">Popular Reads</h1>
             <div class="popular">
-                <h1 class="popular-heading">Popular</h1>
-                    <NewsIcon
-                        picture={reactLogo}
-                        title="En
-                        ter title here"
-                    />
-                </div>
-                <div class="recent">
-                    <h1 class="recent-heading">Recent</h1>
+                <div class="popular-article">
                         <NewsIcon
                             picture={reactLogo}
-                            title="Enter title here" />
+                            articleType="NEWS"
+                            author="author name"
+                            releaseDate="N/A"
+                            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        />
                 </div>
-            </div> */}
-
-            <div id="extra">
-                <div id="popular-section">
+                <div class="popular-article">
+                        <NewsIcon
+                            picture={reactLogo}
+                            articleType="NEWS"
+                            author="author name"
+                            releaseDate="N/A"
+                            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        />
+                </div>
                     
                 </div>
             </div>
-            
         </div>
     );
 }
