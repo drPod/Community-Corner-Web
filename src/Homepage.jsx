@@ -74,12 +74,13 @@ function Homepage() {
                 </div>
                 
             </div>
-            <div class="extra">
+            {/* <div class="extra">
             <div class="popular">
                 <h1 class="popular-heading">Popular</h1>
                     <NewsIcon
                         picture={reactLogo}
-                        title="Enter title here"
+                        title="En
+                        ter title here"
                     />
                 </div>
                 <div class="recent">
@@ -87,6 +88,12 @@ function Homepage() {
                         <NewsIcon
                             picture={reactLogo}
                             title="Enter title here" />
+                </div>
+            </div> */}
+
+            <div id="extra">
+                <div id="popular-section">
+                    
                 </div>
             </div>
             
