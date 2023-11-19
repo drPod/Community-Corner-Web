@@ -1,36 +1,17 @@
-import { useState } from 'react';
-import './App.css';
-import '../tailwind.config'; 
-import Navbar from './Navbar';
-import Homepage from './Homepage';
-import Footer from './Footer';
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Home from "./pages/Home"
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const BrowserRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />
+    }
+  ])
 
   return (
-    <div>
-      <div class="body">
-        <Navbar />
-        <Homepage />
-        {/* <h1>Vite + React</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p> */}
-      </div>
-      <div id="footer">
-        <Footer />
-      </div>
-    </div>
-    
+    <RouterProvider router={BrowserRouter} />
   )
 }
 
