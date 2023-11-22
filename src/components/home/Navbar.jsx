@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook, faSpotify } from '@fortawesome/free-brands-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import logo from '../../assets/Logo.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const currentDate = new Date().toLocaleDateString('en-US', {
@@ -12,7 +13,7 @@ const Navbar = () => {
     })
 
     const links = [
-        "about", "news", "culture", "opinion", "podcast", "conference"
+        "home", "about", "news", "culture", "opinion", "podcast", "conference"
     ]
 
     return (
@@ -37,10 +38,11 @@ const Navbar = () => {
             <div className="w-5/6 flex flex-row justify-between text-white">
                 {
                     links.map(link => (
-                        <a href="#" className="hover:text-black">{link.toUpperCase()}</a>
+                        <Link to={`/${link}`} key={link} className="hoover:text-black">{link.toUpperCase()}</Link>
+                        // <a href="/about" className="hover:text-black">{link.toUpperCase()}</a>
                     ))
                 }
-                <button>SIGN IN / JOIN</button>
+                <Link to="/login">SIGN IN / JOIN</Link>
             </div>
         </div>
     )

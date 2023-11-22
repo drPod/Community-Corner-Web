@@ -4,7 +4,7 @@ import Footer from "../components/home/Footer"
 import "../components/animations/FadeIn.css"
 import { useState, useEffect } from "react"
 
-export default function Home() {
+export default function Home({ navigation }) {
     const [step, setStep] = useState(0)
     useEffect(() => {
         const interval = setInterval(() => {
@@ -31,6 +31,7 @@ export default function Home() {
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis aliquam ultricies, nisl"
         }
     ]
+
     const images = ["url(/placeholder.png)", "url(/Logo.png)", "url(/placeholder.png)", "url(/Logo.png)"]
     return (
         <Container>
