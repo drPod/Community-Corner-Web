@@ -37,6 +37,8 @@
   align-items: center;
 }
 
+
+
 .sub-heading{
   font-size: 30pt;
   margin-left: 40px;
@@ -47,4 +49,44 @@
   display: flex;
   margin-top: 40px;
   justify-content: space-evenly;
+}
+
+#news-heading{
+  font-size: 35pt;
+  text-decoration: underline;
+  margin: 40px;
+  margin-left: 60px;
+}
+
+.news-section{
+  display: flex;
+  margin: 30px;
+  padding: 10px;
+}
+
+.news-image{
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+.news-button{
+  border: 1px solid black;
+}
+
+#news-column{
+  display: flex;
+  justify-content: space-between;
+}
+
+#list-heading{
+  font-size: 30pt;
+  background-color: #3BA556;
+}
+
+#list-column{
+  margin-right: 40px;
+  border: 2px solid black;
 }
