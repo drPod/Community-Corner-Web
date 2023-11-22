@@ -6,8 +6,8 @@ export default function News(){
         <div>
             <Navbar />
             <div>
-                <h1 id="news-heading">News</h1>
-                <div id="news-column">
+                <h1 class="news-heading">News</h1>
+                <div class="news-column">
     
                     <div>
                         <div class="news-section">
@@ -46,8 +46,8 @@ export default function News(){
                             </div>
                         </div>
                     </div>
-                    <div id="list-column">
-                        <h1 id="list-heading">Exciting Reads</h1>
+                    <div class="list-column">
+                        <h1 class="list-heading">Exciting Reads</h1>
                         <ul>
                             <li>Number 1</li>
                             <li>Number 2</li>

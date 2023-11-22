@@ -51,7 +51,7 @@
   justify-content: space-evenly;
 }
 
-#news-heading{
+.news-heading{
   font-size: 35pt;
   text-decoration: underline;
   margin: 40px;
@@ -76,17 +76,17 @@
   border: 1px solid black;
 }
 
-#news-column{
+.news-column{
   display: flex;
   justify-content: space-between;
 }
 
-#list-heading{
+.list-heading{
   font-size: 30pt;
   background-color: #3BA556;
 }
 
-#list-column{
+.list-column{
   margin-right: 40px;
   border: 2px solid black;
 }
