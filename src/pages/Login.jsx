@@ -1,10 +1,5 @@
-import * as React from 'react';
-import Navbar from "../components/home/Navbar"
+import * as React from "react";
 
-export default function Login(){
-    return (
-        <div>
-            <Navbar />
-        </div>
-    )
+export default function Login() {
+  return <div></div>;
 }
