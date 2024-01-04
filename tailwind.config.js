@@ -4,6 +4,9 @@ export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {},
+    fontFamily: {
+      playfair: ["Playfair Display", "serif"],
+    },
   },
   plugins: [],
-}
+};

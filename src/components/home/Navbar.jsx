@@ -1,51 +1,132 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faFacebook, faSpotify } from '@fortawesome/free-brands-svg-icons'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import logo from '../../assets/Logo.png'
-import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faFacebook,
+  faSpotify,
+} from "@fortawesome/free-brands-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import logo from "../../assets/Logo.png";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-const Navbar = () => {
-    const currentDate = new Date().toLocaleDateString('en-US', {
-        weekday: 'long',
-        month: 'long',
-        day: 'numeric',
-        year: 'numeric',
-    })
+function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
+  const currentDate = new Date().toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+  const navigate = useNavigate();
+  const links = [
+    "about",
+    "news",
+    "culture",
+    "opinion",
+    "podcast",
+    "conference",
+    "masthead",
+  ];
+  function handleClick() {
+    setShowMenu((e) => !e);
+  }
 
-    const links = [
-        "home", "about", "news", "culture", "opinion", "podcast", "conference"
-    ]
+  return (
+    <header className="w-full flex flex-col items-center justify-center bg-[#fff] overflow-x-hidden py-4 border-y-8 border-[#53B161]">
+      <span className="font-playfair text-xl mx-auto">{currentDate}</span>
+      <nav className="flex justify-between items-center py-4 px-8">
+        <div className="w-[33%] flex justify-center text-slate-900">
+          {!showMenu ? (
+            <button onClick={handleClick}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-8 h-8 fill-stone-900"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          ) : null}
 
-    return (
-        <div className="w-full flex flex-col items-center justify-center gap-y-10 bg-[#53B161] py-5 sticky top-0">
-            <div className="w-5/6 flex flex-row justify-between items-center">
-                <span className="font-mono text-xl">{currentDate}</span>
-                <div className="flex flex-row gap-x-3 text-white">
-                    <a target="_blank" href="https://www.instagram.com/community_chronicle/" title="Instagram">
-                        <FontAwesomeIcon fontSize={20} icon={faInstagram} />
-                    </a>
-                    <a href="#" title="Facebook">
-                        <FontAwesomeIcon fontSize={20} icon={faFacebook} />
-                    </a>
-                    <a href="#" title="Spotify">
-                        <FontAwesomeIcon fontSize={20} icon={faSpotify} />
-                    </a>
-                    <a href="#" title="Search">
-                        <FontAwesomeIcon fontSize={20} icon={faSearch} />
-                    </a>
-                </div>
+          {showMenu ? (
+            <div className="flex flex-col justify-center items-center absolute top-0 left-0 h-full w-full gap-6 font-medium text-3xl bg-[rgba(255,255,255,0.75)] backdrop-blur-md z-10 text-stone-900">
+              <Link to="/" onClick={handleClick} className="hover:underline">
+                HOME
+              </Link>
+              {links.map((link) => (
+                <Link
+                  to={`/${link}`}
+                  key={link}
+                  className="hover:underline"
+                  onClick={handleClick}
+                >
+                  {" "}
+                  {link.toUpperCase()}
+                </Link>
+              ))}
+              <Link
+                to="/login"
+                onClick={handleClick}
+                className="hover:underline"
+              >
+                SIGN IN / JOIN
+              </Link>
             </div>
-            <div className="w-5/6 flex flex-row justify-between text-white">
-                {
-                    links.map(link => (
-                        <Link to={`/${link}`} key={link} className="hoover:text-black">{link.toUpperCase()}</Link>
-                        // <a href="/about" className="hover:text-black">{link.toUpperCase()}</a>
-                    ))
-                }
-                <Link to="/login">SIGN IN / JOIN</Link>
-            </div>
+          ) : null}
+          {showMenu ? (
+            <button className=" z-20" onClick={handleClick}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-8 h-8 fill-stone-900"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          ) : null}
         </div>
-    )
+        <img
+          src={logo}
+          alt="logo"
+          className="w-[15%] cursor-pointer"
+          onClick={() => navigate("/")}
+        />
+        <div className="w-[33%] flex gap-x-3 text-slate-900 justify-center items-center">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/community_chronicle/"
+            title="Instagram"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon fontSize={20} icon={faInstagram} />
+          </a>
+          <a href="#" title="Facebook">
+            <FontAwesomeIcon fontSize={20} icon={faFacebook} />
+          </a>
+          <a href="#" title="Spotify">
+            <FontAwesomeIcon fontSize={20} icon={faSpotify} />
+          </a>
+          <a href="#" title="Search">
+            <FontAwesomeIcon fontSize={20} icon={faSearch} />
+          </a>
+        </div>
+      </nav>
+    </header>
+  );
 }
 
-export default Navbar
+export default Navbar;
