@@ -32,7 +32,7 @@ function Navbar() {
   }
 
   return (
-    <header className="w-full flex flex-col items-center justify-center bg-[#fff] overflow-x-hidden py-4 border-y-8 border-[#53B161]">
+    <header className="w-full flex flex-col items-center justify-center bg-[#fff] py-4 border-y-8 border-[#53B161]">
       <span className="font-playfair text-xl mx-auto">{currentDate}</span>
       <nav className="flex justify-between items-center py-4 px-8">
         <div className="w-[33%] flex justify-center text-slate-900">
