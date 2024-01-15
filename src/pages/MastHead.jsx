@@ -202,17 +202,6 @@ function MastHead() {
           imgPath={imgPlaceholder}
         />
       </div>
-      <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
-        Other Members
-      </h1>
-      <div className="grid grid-cols-1 p-16 mb-8 gap-y-8  sm:gap-x-8  xl:px-40  sm:px-32 2xl:px-80 justify-items-center">
-        <ProfileCard
-          name={"Shreya"}
-          position={""}
-          imgPath={imgShreya}
-          className="max-w-md"
-        />
-      </div>
     </>
   );
 }

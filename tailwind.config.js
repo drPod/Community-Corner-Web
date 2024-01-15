@@ -3,9 +3,14 @@
 export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        screen: "100dvh",
+      },
+    },
     fontFamily: {
-      playfair: ["Playfair Display", "serif"],
+      playfair: ["Merriweather", "serif"],
+      sans: ["Merriweather", "serif"],
     },
   },
   plugins: [],

@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import MastHead from "./pages/MastHead";
 import AppLayout from "./components/AppLayout";
 import Error from "./components/Error";
+import NewsView from "./pages/NewsView";
 
 function App() {
   const BrowserRouter = createBrowserRouter([
@@ -29,6 +30,10 @@ function App() {
         {
           path: "news",
           element: <News />,
+        },
+        {
+          path: "/news/:id",
+          element: <NewsView />,
         },
         {
           path: "culture",

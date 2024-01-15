@@ -32,7 +32,7 @@ function Navbar() {
   }
 
   return (
-    <header className="w-full flex flex-col items-center justify-center bg-[#fff] py-4 border-y-8 border-[#53B161]">
+    <header className="w-full flex flex-col items-center justify-center bg-[#fff] py-4 border-y-8 border-[#53B161] transition-all duration-300">
       <span className="font-playfair text-xl mx-auto">{currentDate}</span>
       <nav className="flex justify-between items-center py-4 px-8">
         <div className="w-[33%] flex justify-center text-slate-900">
@@ -56,7 +56,7 @@ function Navbar() {
           ) : null}
 
           {showMenu ? (
-            <div className="flex flex-col justify-center items-center absolute top-0 left-0 h-full w-full gap-6 font-medium text-3xl bg-[rgba(255,255,255,0.75)] backdrop-blur-md z-10 text-stone-900">
+            <div className="flex flex-col justify-center items-center absolute top-0 left-0 h-screen w-screen gap-6 font-medium text-3xl bg-[rgba(255,255,255,0.75)] backdrop-blur-md z-10 text-stone-900">
               <Link to="/" onClick={handleClick} className="hover:underline">
                 HOME
               </Link>
