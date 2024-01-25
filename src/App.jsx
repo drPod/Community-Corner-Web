@@ -11,8 +11,25 @@ import MastHead from "./pages/MastHead";
 import AppLayout from "./components/AppLayout";
 import Error from "./components/Error";
 import NewsView from "./pages/NewsView";
+import Dashboard from "./pages/Dashboard";
+import ProtectedRoute from "./ProtectedRoute";
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+//remove this later
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+import { Toaster } from "react-hot-toast";
 
 function App() {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 0,
+      },
+    },
+  });
+
   const BrowserRouter = createBrowserRouter([
     {
       element: <AppLayout />,
@@ -61,9 +78,23 @@ function App() {
         },
       ],
     },
+    {
+      path: "/dashboard",
+      element: (
+        <ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>
+      ),
+    },
   ]);
 
-  return <RouterProvider router={BrowserRouter} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+      <Toaster position="top-center" />
+      <RouterProvider router={BrowserRouter}></RouterProvider>
+    </QueryClientProvider>
+  );
 }
 
 export default App;

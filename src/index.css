@@ -2,33 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+/* //////////////////////////// */
+@layer components {
+  .loader {
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(theme(colors.green.600) 0 0);
+    background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+    background-size: 20% 50%;
+    animation: loading 1s infinite linear;
+  }
+
+  @keyframes loading {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+
+  .spinner {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    color: #f9fafb;
+  }
+
+  @keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+}
+/* //////////////////////////// */
+
 ::-webkit-scrollbar {
   width: 5px;
 }
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
-  border-radius: "10px" 
+  border-radius: "10px";
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background: #888;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
-#about-heading{
+#about-heading {
   font-size: 60pt;
   text-align: center;
   margin: 20px;
   border: 1px solid black;
-  background-color: #3BA556;
+  background-color: #3ba556;
 }
 
-#about-us-navbar{
+#about-us-navbar {
   display: flex;
   justify-content: space-evenly;
   background-color: gray;
@@ -37,34 +85,32 @@
   align-items: center;
 }
 
-
-
-.sub-heading{
+.sub-heading {
   font-size: 30pt;
   margin-left: 40px;
   text-decoration: underline;
 }
 
-.about-section{
+.about-section {
   display: flex;
   margin-top: 40px;
   justify-content: space-evenly;
 }
 
-.news-heading{
+.news-heading {
   font-size: 35pt;
   text-decoration: underline;
   margin: 40px;
   margin-left: 60px;
 }
 
-.news-section{
+.news-section {
   display: flex;
   margin: 30px;
   padding: 10px;
 }
 
-.news-image{
+.news-image {
   border: 2px solid black;
   width: 200px;
   height: 200px;
@@ -72,21 +118,21 @@
   margin-right: 50px;
 }
 
-.news-button{
+.news-button {
   border: 1px solid black;
 }
 
-.news-column{
+.news-column {
   display: flex;
   justify-content: space-between;
 }
 
-.list-heading{
+.list-heading {
   font-size: 30pt;
-  background-color: #3BA556;
+  background-color: #3ba556;
 }
 
-.list-column{
+.list-column {
   margin-right: 40px;
   border: 2px solid black;
 }
