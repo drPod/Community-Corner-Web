@@ -12,7 +12,7 @@ import imgOlivia from "./../assets/cc_profile_imgs/Olivia.png";
 import imgPuneeth from "./../assets/cc_profile_imgs/Puneeth.png";
 import imgRashmi from "./../assets/cc_profile_imgs/Rashmi.png";
 import imgSaanvi from "./../assets/cc_profile_imgs/Saanvi.png";
-import imgShreya from "./../assets/cc_profile_imgs/Shreya.png";
+// import imgShreya from "./../assets/cc_profile_imgs/Shreya.png";
 import imgTanush from "./../assets/cc_profile_imgs/Tanush.png";
 import imgPlaceholder from "./../assets/cc_profile_imgs/placeholder.png";
 
@@ -67,7 +67,6 @@ function MastHead() {
           name={"Darsh Poddar"}
           position={"COO\nCo-host\nNews Topic - Cybersecurity\nCo-Founder"}
           imgPath={imgPlaceholder}
-          className=""
         />
       </div>
       <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
