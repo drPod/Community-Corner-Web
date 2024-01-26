@@ -50,7 +50,7 @@ function MastHead() {
       <div className="grid grid-cols-1 p-16 mb-8 gap-y-8 sm:grid-cols-2 sm:gap-x-8 xl:px-40 sm:px-32 2xl:px-80 justify-items-center xl:grid-cols-3">
         <ProfileCard
           name={"Nikhil Kotta"}
-          position={"CEO\nCo-host"}
+          position={"CEO\nCo-host\nCo-Founder"}
           imgPath={imgNikhilK}
         />
         <ProfileCard
@@ -65,7 +65,7 @@ function MastHead() {
         />
         <ProfileCard
           name={"Darsh Poddar"}
-          position={"COO\nCo-host\nNews Topic - Cybersecurity"}
+          position={"COO\nCo-host\nNews Topic - Cybersecurity\nCo-Founder"}
           imgPath={imgPlaceholder}
           className=""
         />
@@ -88,7 +88,7 @@ function MastHead() {
         />
         <ProfileCard
           name={"Arnav Senapathi"}
-          position={"Co-host"}
+          position={"Co-host\nCo-Founder"}
           imgPath={imgArnav}
         />
         <ProfileCard
@@ -182,7 +182,7 @@ function MastHead() {
           imgPath={imgPuneeth}
         />
         <ProfileCard
-          name={"Manil Shagle"}
+          name={"Manil Shangle"}
           position={"News Topic - Computer Science"}
           imgPath={imgPlaceholder}
         />
@@ -192,7 +192,7 @@ function MastHead() {
           imgPath={imgPlaceholder}
         />
         <ProfileCard
-          name={"Aarav "}
+          name={"Aarav Poddar"}
           position={"News Topic - Medicine"}
           imgPath={imgPlaceholder}
         />
