@@ -1,28 +1,10 @@
 import * as React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faFacebook,
-  faSpotify,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Podcast() {
   return (
     <div>
       <div>
-        <h1 class="news-heading" href="https://youtube.com" >Podcast</h1>
-        <h1 class="news-heading">
-            <a
-              target="_blank"
-              href="https://youtube.com"
-              title="Youtube"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon fontSize={50} icon={faYoutube} />
-            </a>
-        </h1>
+        <h1 class="news-heading">Podcast</h1>
         <div class="news-column">
           <div>
             <div class="news-section">
