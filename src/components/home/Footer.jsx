@@ -5,10 +5,7 @@ function Footer() {
   const links = [
     "About",
     "News",
-    "Culture",
-    "Opinion",
     "Podcast",
-    "Conference",
     "Masthead",
   ];
   return (
