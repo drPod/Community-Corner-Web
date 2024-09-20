@@ -21,14 +21,14 @@ function Navbar() {
   const links = [
     "about",
     "news",
-    "culture",
-    "opinion",
     "podcast",
-    "conference",
     "masthead",
   ];
   function handleClick() {
     setShowMenu((e) => !e);
+  }
+  function onFormSubmit() {
+    window.location.href="/searcher"
   }
 
   return (
@@ -105,6 +105,7 @@ function Navbar() {
           className="w-[15%] cursor-pointer"
           onClick={() => navigate("/")}
         />
+        
         <div className="w-[33%] flex gap-x-3 text-slate-900 justify-center items-center">
           <a
             target="_blank"
@@ -120,10 +121,14 @@ function Navbar() {
           <a href="#" title="Spotify">
             <FontAwesomeIcon fontSize={20} icon={faSpotify} />
           </a>
-          <a href="#" title="Search">
-            <FontAwesomeIcon fontSize={20} icon={faSearch} />
-          </a>
+          <div class="container" >
+            <form onSubmit={onFormSubmit}>
+              <input type="text" placeholder="search anything" name="q" />
+              {/* <button type="submit"><FontAwesomeIcon fontSize={20} icon={faSearch} /></button> */}
+            </form>
         </div>
+        </div>
+       
       </nav>
     </header>
   );
