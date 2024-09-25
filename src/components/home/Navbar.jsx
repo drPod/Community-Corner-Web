@@ -27,8 +27,9 @@ function Navbar() {
   function handleClick() {
     setShowMenu((e) => !e);
   }
+
   function onFormSubmit() {
-    window.location.href="/searcher"
+    window.location.href="/src/pages/Searcher.jsx";
   }
 
   return (
@@ -124,9 +125,12 @@ function Navbar() {
           <div class="container" >
             <form onSubmit={onFormSubmit}>
               <input type="text" placeholder="search anything" name="q" />
-              {/* <button type="submit"><FontAwesomeIcon fontSize={20} icon={faSearch} /></button> */}
+              {/* <button onclick="window.location.href='Searcher'"> <FontAwesomeIcon fontSize={20} icon={faSearch} /> </button>  */}
             </form>
         </div>
+        <a href="/Searcher" title="Spotify">
+            <FontAwesomeIcon fontSize={20} icon={faSearch} />
+          </a>
         </div>
        
       </nav>

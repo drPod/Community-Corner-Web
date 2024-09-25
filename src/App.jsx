@@ -12,6 +12,7 @@ import AppLayout from "./components/AppLayout";
 import Error from "./components/Error";
 import NewsView from "./pages/NewsView";
 import Dashboard from "./pages/Dashboard";
+import Searcher from "./pages/Searcher";
 import ProtectedRoute from "./ProtectedRoute";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -59,6 +60,10 @@ function App() {
         {
           path: "podcast",
           element: <Podcast />,
+        },
+        {
+          path: "searcher",
+          element: <Searcher />,
         },
         {
           path: "opinion",
