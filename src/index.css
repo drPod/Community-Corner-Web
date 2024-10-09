@@ -110,13 +110,32 @@
   padding: 10px;
 }
 
+a.button {
+  padding: 1px 6px;
+  border: 1px;
+  border-radius: 3px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+}
+
 .news-image {
   border: 2px solid black;
   width: 200px;
   height: 200px;
   margin-left: 20px;
   margin-right: 50px;
+
 }
+
+img.podcast {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 300px;
+    height: 300px;
+}
+
 
 .news-button {
   border: 1px solid black;

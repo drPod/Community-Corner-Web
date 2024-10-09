@@ -110,25 +110,34 @@ function Navbar() {
         <div className="w-[33%] flex gap-x-3 text-slate-900 justify-center items-center">
           <a
             target="_blank"
-            href="https://www.instagram.com/community_chronicle/"
+            href="https://open.spotify.com/show/1JKtqyhc7KoiYLg9hfP34I"
             title="Instagram"
             rel="noreferrer"
           >
             <FontAwesomeIcon fontSize={20} icon={faInstagram} />
           </a>
+
           <a href="#" title="Facebook">
             <FontAwesomeIcon fontSize={20} icon={faFacebook} />
           </a>
-          <a href="#" title="Spotify">
+          <a 
+            target="_blank"
+            href="https://open.spotify.com/show/1JKtqyhc7KoiYLg9hfP34I  "
+            title="Instagram"
+            rel="noreferrer"
+          >
             <FontAwesomeIcon fontSize={20} icon={faSpotify} />
+
           </a>
           <div class="container" >
+
             <form onSubmit={onFormSubmit}>
               <input type="text" placeholder="search anything" name="q" />
-              {/* <button onclick="window.location.href='Searcher'"> <FontAwesomeIcon fontSize={20} icon={faSearch} /> </button>  */}
             </form>
+
         </div>
-        <a href="/Searcher" title="Spotify">
+
+        <a href="/Searcher" title="Searcher">
             <FontAwesomeIcon fontSize={20} icon={faSearch} />
           </a>
         </div>

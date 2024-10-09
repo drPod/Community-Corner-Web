@@ -12,7 +12,7 @@ export default function Searcher() {
   return (
     <div>
       <div>
-        <h1 class="news-heading" >Search</h1>
+        <h1 class="news-heading" ></h1>
       </div>
     </div>
   );
