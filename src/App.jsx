@@ -13,6 +13,9 @@ import Error from "./components/Error";
 import NewsView from "./pages/NewsView";
 import Dashboard from "./pages/Dashboard";
 import Searcher from "./pages/Searcher";
+import ContactUs from "./pages/ContactUs";
+import WriteForUs from "./pages/WriteForUs";
+import DiversityInclusion from "./pages/DiversityInclusion";
 import ProtectedRoute from "./ProtectedRoute";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -66,6 +69,14 @@ function App() {
           element: <Searcher />,
         },
         {
+          path: "diversity and inclusion",
+          element: <DiversityInclusion />,
+        },
+        {
+          path: "contact us",
+          element: <ContactUs />,
+        },
+        {
           path: "opinion",
           element: <Opinion />,
         },
@@ -76,6 +87,10 @@ function App() {
         {
           path: "login",
           element: <Login />,
+        },
+        {
+          path: "write for us",
+          element: <WriteForUs />,
         },
         {
           path: "masthead",

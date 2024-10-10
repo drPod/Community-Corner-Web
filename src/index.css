@@ -136,6 +136,15 @@ img.podcast {
     height: 300px;
 }
 
+hr {
+  color: red;
+  background-color: black;
+  height: 4px;
+  width: 90%;
+  margin:auto;
+  margin-top: 1%;
+}
+
 
 .news-button {
   border: 1px solid black;

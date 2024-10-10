@@ -15,9 +15,6 @@ import snpOGEdition from "./../assets/podcastImages/snpOGEdition.png";
 import snpBehavioralFinance from "./../assets/podcastImages/snpBehavioralFinance.png";
 
 
-
-
-
 function loadPodcast(name, link, type) {
   let useImage;
   if (type == "pf") {

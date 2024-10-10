@@ -23,6 +23,9 @@ function Navbar() {
     "news",
     "podcast",
     "masthead",
+    "diversity and inclusion",
+    "contact us",
+    "write for us"
   ];
   function handleClick() {
     setShowMenu((e) => !e);
@@ -110,7 +113,7 @@ function Navbar() {
         <div className="w-[33%] flex gap-x-3 text-slate-900 justify-center items-center">
           <a
             target="_blank"
-            href="https://open.spotify.com/show/1JKtqyhc7KoiYLg9hfP34I"
+            href="https://www.instagram.com/community_chronicle/"
             title="Instagram"
             rel="noreferrer"
           >

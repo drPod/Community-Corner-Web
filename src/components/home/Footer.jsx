@@ -7,6 +7,9 @@ function Footer() {
     "News",
     "Podcast",
     "Masthead",
+    "Diversity and Inclusion",
+    "Contact Us",
+    "Write for Us"
   ];
   return (
     <footer className="w-full border-b-8 border-[#53B161]">
