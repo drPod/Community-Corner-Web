@@ -97,6 +97,11 @@
   justify-content: space-evenly;
 }
 
+.about-section-left {
+  margin-top: 40px;
+  justify-content: space-evenly;
+}
+
 .news-heading {
   font-size: 35pt;
   text-decoration: underline;

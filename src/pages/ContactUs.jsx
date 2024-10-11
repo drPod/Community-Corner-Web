@@ -30,7 +30,7 @@ export default function ContactUs() {
           </div>
         </div>
 
-        <div className="about-section">
+        <div className="about-section-left">
           <div>
             <h3 className="sub-heading text-left">Main Contact:</h3>
             <p className="ml-10 mr-5 text-left">
@@ -45,7 +45,7 @@ export default function ContactUs() {
              </a>
             </p>
 
-            <p>
+            <p className="ml-10 mr-5 text-left">
              <a 
                 target="_blank"
                 href="https://www.instagram.com/community_chronicle/"
@@ -57,7 +57,7 @@ export default function ContactUs() {
              </a>
             </p>
 
-            <p>
+            <p className="ml-10 mr-5 text-left">
              <a 
                 target="_blank"
                 href="https://www.instagram.com/communitycorner_podcast/"
@@ -69,7 +69,7 @@ export default function ContactUs() {
              </a>
             </p>
 
-            <p>
+            <p className="ml-10 mr-5 text-left">
              <a 
                 target="_blank"
                 href="https://open.spotify.com/show/1JKtqyhc7KoiYLg9hfP34I"
@@ -83,12 +83,12 @@ export default function ContactUs() {
           </div>
         </div>
 
-        <div className="about-section">
+        <div className="about-section-left">
           <div>
             <h3 className="sub-heading">CEO</h3>
-            <p>Nikhil Kotta
+            <p className="ml-10 mr-5 text-left"> Nikhil Kotta
             </p>
-            <p> 
+            <p className="ml-10 mr-5 text-left"> 
             <a 
                 target="_blank"
                 href="nikhilkotta@gmail.com"
