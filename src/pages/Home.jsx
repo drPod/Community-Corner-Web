@@ -52,7 +52,7 @@ export default function Home() {
               </h1>
               <h2 className="w-1/2 text-xl fadeInDelay">
                 Student Run News Organization. Filled with thousands of
-                dmeaningful and unique articles for your everyday knowledge,
+                meaningful and unique articles for your everyday knowledge,
                 enjoyment, and ease!
               </h2>
             </div>

@@ -132,7 +132,7 @@ function Navbar() {
             <FontAwesomeIcon fontSize={20} icon={faSpotify} />
 
           </a>
-          <div class="container" >
+          <div className="container" >
 
             <form onSubmit={onFormSubmit}>
               <input type="text" placeholder="search anything" name="q" />
