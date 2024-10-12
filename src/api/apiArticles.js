@@ -1,6 +1,4 @@
-import { supabase } from "./supabase";
-
-const supabaseUrl = "https://rsusuweuyabymzefqvbh.supabase.co";
+import { supabase, supabaseUrl } from "./supabase";
 
 export async function getArticles() {
   let { data: newsArticles, error } = await supabase

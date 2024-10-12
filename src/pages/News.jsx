@@ -2,11 +2,12 @@
 import { Link } from "react-router-dom";
 import { useArticles } from "../api/useArticles";
 import Loader from "../ui/Loader";
+import { supabaseUrl } from "../api/supabase";
 
 function NewsBox({ data }) {
   const heading = data.heading;
   const content = data.content;
-  const img = data.img;
+  const img = (data.img == null) ? "" : supabaseUrl + "/storage/v1/object/public/article-images/" + data.img;
   const author = data.author;
   const id = data.id;
 
