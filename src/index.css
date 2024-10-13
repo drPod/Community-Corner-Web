@@ -91,6 +91,12 @@
   text-decoration: underline;
 }
 
+.sub-sub-heading {
+  font-size: 20pt;
+  margin-left: 40px;
+  text-decoration: underline;
+}
+
 .about-section {
   display: flex;
   margin-top: 40px;
