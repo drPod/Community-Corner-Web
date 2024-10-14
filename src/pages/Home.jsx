@@ -1,7 +1,7 @@
 import Container from "../components/Container";
 import "../components/animations/FadeIn.css";
 import { useState, useEffect } from "react";
-
+import { Helmet } from "react-helmet-async";
 export default function Home() {
   const [step, setStep] = useState(0);
   useEffect(() => {
@@ -40,6 +40,11 @@ export default function Home() {
   ];
   return (
     <>
+      <Helmet>
+        <title>Community Chronicle Home</title>
+        <link rel="canonical" href="/" ></link>
+        <meta name="description" content="Student Run News Organization. Filled with thousands of meaningful and unique articles for your everyday knowledge, enjoyment, and ease!"></meta>
+      </Helmet>
       <Container>
         <div className="w-full h-full flex flex-col">
           <div

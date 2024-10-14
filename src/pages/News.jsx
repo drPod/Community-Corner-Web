@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useArticles } from "../api/useArticles";
 import Loader from "../ui/Loader";
 import { supabaseUrl } from "../api/supabase";
+import { Helmet } from "react-helmet-async";
 
 function NewsBox({ data }) {
   const heading = data.heading;
@@ -12,21 +13,28 @@ function NewsBox({ data }) {
   const id = data.id;
 
   return (
-    <div className="bg-gray-100 rounded-md border-[#98d0a0] border-8 text-green-900">
-      <div className="flex items-center justify-center">
-        <img src={img} className="max-w-10" />
+    <>
+      <Helmet>
+        <title>Community Chronicle News</title>
+        <link rel="canonical" href="/news" ></link>
+        <meta name="description" content="News from Community Chronicle" />
+      </Helmet>
+      <div className="bg-gray-100 rounded-md border-[#98d0a0] border-8 text-green-900">
+        <div className="flex items-center justify-center">
+          <img src={img} className="max-w-10" />
+        </div>
+        <div className="p-8">
+          <h2 className="my-3 font-extrabold text-2xl">{heading}</h2>
+          <p className="my-3 font-light">By {author}</p>
+          <p className="my-3">
+            {content.substring(0, 250)}........{" "}
+            <Link to={`${id}`} className="font-bold underline">
+              Read More
+            </Link>
+          </p>
+        </div>
       </div>
-      <div className="p-8">
-        <h2 className="my-3 font-extrabold text-2xl">{heading}</h2>
-        <p className="my-3 font-light">By {author}</p>
-        <p className="my-3">
-          {content.substring(0, 250)}........{" "}
-          <Link to={`${id}`} className="font-bold underline">
-            Read More
-          </Link>
-        </p>
-      </div>
-    </div>
+    </>
   );
 }
 

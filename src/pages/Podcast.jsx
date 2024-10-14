@@ -13,7 +13,7 @@ import techInSociety from "./../assets/podcastImages/techInSociety.png";
 import economicCartography from "./../assets/podcastImages/economicCartography.png";
 import snpOGEdition from "./../assets/podcastImages/snpOGEdition.png";
 import snpBehavioralFinance from "./../assets/podcastImages/snpBehavioralFinance.png";
-
+import { Helmet } from "react-helmet-async";
 
 function loadPodcast(name, link, type) {
   let useImage;
@@ -32,27 +32,33 @@ function loadPodcast(name, link, type) {
   }
 
   return (
-    <div class="news-section" id="podcastNames"> 
-      <a href={link}>
-        <img class = "podcast" src={useImage} href={"https://open.spotify.com/show/" + link} alt="Podcast" />
-      </a>
-       <div>
-          <h3>{name}</h3>
-          <a
-            class ="button"
-            target="_blank"
-            href={"https://open.spotify.com/show/" + link}
-            title="Instagram"
-            rel="noreferrer"
-          > Check out here</a>
-       </div>
-       <a></a>
-       <div>
-          <iframe class="border-radius:12px" src={"https://open.spotify.com/embed/show/" + link} width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          
-       </div>
-    </div>
-
+    <>
+      <Helmet>
+        <title>Community Chronicle Podcasts</title>
+        <link rel="canonical" href="/podcast" ></link>
+        <meta name="description" content="Community Chronicle Podcasts" />
+      </Helmet>
+      <div class="news-section" id="podcastNames"> 
+        <a href={link}>
+          <img class = "podcast" src={useImage} href={"https://open.spotify.com/show/" + link} alt="Podcast" />
+        </a>
+        <div>
+            <h3>{name}</h3>
+            <a
+              class ="button"
+              target="_blank"
+              href={"https://open.spotify.com/show/" + link}
+              title="Instagram"
+              rel="noreferrer"
+            > Check out here</a>
+        </div>
+        <a></a>
+        <div>
+            <iframe class="border-radius:12px" src={"https://open.spotify.com/embed/show/" + link} width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            
+        </div>
+      </div>
+    </>
   );
 
 }

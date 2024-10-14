@@ -1,5 +1,13 @@
+import { Helmet } from "react-helmet-async";
+
 export default function DiversityInclusion() {
   return (
+    <>
+    <Helmet>
+       <title>Community Chronicle Diversity & Inclusion</title>
+       <link rel="canonical" href="/diversity and inclusion" ></link>
+       <meta name="description" content="The Community Chronicle's 170+ staffers come from 40 nationalities across 35 different locations. Our belief in the importance of diverse perspectives is central to our mission, as we strive to produce content that is cohesive, inclusive, and representative of the varied experiences and insights of our team members." />
+     </Helmet>
     <div>
       <div>
         <h1 id="about-heading">Diversity and Inclusion</h1>
@@ -111,5 +119,6 @@ export default function DiversityInclusion() {
 
       </div>
     </div>
+    </>
   );
 }
