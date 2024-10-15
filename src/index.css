@@ -192,3 +192,28 @@ hr {
 .pre-line {
   white-space: pre-line;
 }
+
+#diversityTable {
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#diversityTable td,
+#diversityTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#diversityTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#diversityTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
