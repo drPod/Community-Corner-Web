@@ -11,6 +11,16 @@ export async function getArticles(articleType, maxCount, orderByColumn) {
   return { articles };
 }
 
+export async function getNewsArticle(newsArticleId) {
+  let { data: articles, error } = await supabase
+    .from("newsArticles")
+    .select("*")
+    .eq("id", newsArticleId);
+  if (error) throw new Error(error.message);
+
+  return { articles };
+}
+
 export async function createEditArticles(newArticle, id) {
   const hasImagePath = newArticle.image?.startsWith?.(supabaseUrl);
 

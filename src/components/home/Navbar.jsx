@@ -75,7 +75,7 @@ function Navbar() {
               <div className="topmenu text-center">
                 <div className="logo">
                   <a href="/">
-                    <img src="Logo.png" width="60" height="60" alt="" />
+                    <img src="/Logo.png" width="60" height="60" alt="" />
                   </a>
                 </div>
               </div>

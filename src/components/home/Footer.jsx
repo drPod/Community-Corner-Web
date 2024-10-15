@@ -20,7 +20,7 @@ function Footer() {
               <div class="widget">
                 <div class="footer-text text-center">
                   <div className="w-full flex justify-center pt-8">
-                    <img src="Logo.png" width="100" height="100" alt="" />
+                    <img src="/Logo.png" width="100" height="100" alt="" />
                   </div>
 
                   <hr class="invis" />

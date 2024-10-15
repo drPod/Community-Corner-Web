@@ -1,18 +1,15 @@
 import { Link, useParams } from "react-router-dom";
-import { useArticles } from "../api/useArticles";
+import { useNewsArticle } from "../api/useArticles";
 import Loader from "../ui/Loader";
-
+import { supabaseUrl } from "../api/supabase";
 function NewsView() {
-  const { isLoading, error, articles } = useArticles(
-    "newsArticles",
-    1,
-    "articleNumber"
-  );
   const { id } = useParams();
+  const { isLoading, error, articles } = useNewsArticle(id);
+
   if (error) {
     return (
       <h2 className="text-center mt-4 text-red-600">
-        There was error loading articles!
+        There was error loading articles! {error.message}
       </h2>
     );
   }
@@ -28,7 +25,10 @@ function NewsView() {
   const data = articles.articles.filter((e) => e.id == id)[0];
   const heading = data.heading;
   const content = data.content;
-  const img = data.img;
+  const img =
+    data.img == null
+      ? ""
+      : supabaseUrl + "/storage/v1/object/public/article-images/" + data.img;
   const author = data.author;
   return (
     <div className="my-20">
