@@ -52,14 +52,6 @@ function Navbar() {
             <div className="col-lg-4 col-md-6 col-sm-6 hidden-xs-down">
               <div className="topsocial">
                 <a
-                  href="#"
-                  data-toggle="tooltip"
-                  data-placement="bottom"
-                  title="Facebook"
-                >
-                  <i className="fa fa-facebook"></i>
-                </a>
-                <a
                   href="https://www.instagram.com/community_chronicle/"
                   data-toggle="tooltip"
                   data-placement="bottom"
