@@ -26,7 +26,7 @@ function ProfileCard({ name, position, imgPath, className }) {
 function MastHead() {
   return (
     <>
-      <h1 className="font-playfair font-[700] text-7xl my-10 text-center">
+      <h1 id="about-heading" className="font-playfair">
         Meet our team!
       </h1>
       <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
@@ -35,14 +35,13 @@ function MastHead() {
         <hr/>
       </h1>
       {/* <div className=" p-16 mb-8 gap-y-8 sm:grid-cols-2 sm:gap-x-8 xl:px-40 sm:px-32 2xl:px-80 justify-items-center xl:grid-cols-3"> */}
-      <h1 className="font-playfair font-[400] text-2xl text-center mt-5">
+      <h1 className="font-playfair font-[400] text-2xl text-center mt-4">
       CEO: Nikhil Kotta <br/>
       CTO: Kunal Shah <br/>
       CFO: Nikhil Chepuri <br/>
       COO: Manil Shangle <br/>
       CCO: Jordan Davis <br/>
       CIO: Hrishik Gogineni <br/>
-        <br/>
       </h1>
       {/* </div> */}
       <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
@@ -50,7 +49,7 @@ function MastHead() {
         <br/>
         <hr/>
       </h1>
-      <h1 className="font-playfair font-[400] text-2xl text-center mt-5">
+      <h1 className="font-playfair font-[400] text-2xl text-center mt-4">
       Aditiya Poduval - Instagram Editor <br/>
       Aleeza - Instagram Editor <br/>
       Kashish Agarwal - Instagram Editor <br/>
@@ -62,7 +61,6 @@ function MastHead() {
       Shivanshi Rohatgi - Instagram Editor <br/>
       Tanush Chauhan - Website Lead <br/>
       Visvesh Arun - Tiktok Editor <br/>
-        <br/>
       </h1>
 
       <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
@@ -70,7 +68,7 @@ function MastHead() {
         <br/>
         <hr/>
       </h1>
-      <h1 className="font-playfair font-[400] text-2xl text-center mt-5">
+      <h1 className="font-playfair font-[400] text-2xl text-center mt-4">
       Aarush - Podcast Co-host <br/>
       Akhil Tadala - Podcast Video Editor <br/>
       Arnav Senapathi - Podcast Co-Host <br/>
@@ -87,7 +85,6 @@ function MastHead() {
       Sanyam - Podcast Co-Host<br/>
       Smarran Manchala - Podcast Co-host<br/>
       Venkatesh - Podcast Co-host <br/>
-        <br/>
       </h1>
 
       <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
@@ -95,7 +92,7 @@ function MastHead() {
         <br/>
         <hr/>
       </h1>
-      <h1 className="font-playfair font-[400] text-2xl text-center mt-5">
+      <h1 className="font-playfair font-[400] text-2xl text-center mt-4 ">
       Aarav - Medicine Paper Editor<br/>
       Aarush Nigam - Behavioral Economics Paper Editor<br/>
       Aditya Singh - Engineering Paper Editor<br/>
@@ -114,7 +111,7 @@ function MastHead() {
       Sushanth Siddareddygari - Medicine Paper Editor<br/>
       Tarun Muddasani - Engineering Paper Editor<br/>
       Tejus Golakoti - Military & International Relations Paper Editor<br/>
-        <br/>
+        <br/><br/>
       </h1>
      
       

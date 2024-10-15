@@ -20,9 +20,7 @@ export default function Home() {
   });
 
   const images = [
-
     "url(/city-wide3.jpg)",
-
   ];
 
   return (
@@ -61,25 +59,25 @@ export default function Home() {
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="section-title">
+              {/* <div class="section-title">
                 <h3 class="color-aqua">
                   <a href="/news" title="">
                     News
                   </a>
                 </h3>
-              </div>
+              </div> */}
 
               <HomeNewsBox />
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="section-title">
+              {/* <div class="section-title">
                 <h3 class="color-pink">
                   <a href="/podcast" title="">
                     Podcasts
                   </a>
                 </h3>
-              </div>
+              </div> */}
               <div class="row">
                 <HomePodcastsBox />
               </div>
