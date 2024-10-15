@@ -188,3 +188,7 @@ hr {
   margin: auto;
   width: 40%;
 }
+
+.pre-line {
+  white-space: pre-line;
+}

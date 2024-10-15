@@ -41,7 +41,7 @@ function NewsView() {
           {heading}
         </h2>
         <p className="text-center py-4 font-light">By {author}</p>
-        <p className="text-lg lg:text-xl">{content}</p>
+        <p className="pre-line text-lg lg:text-xl">{content}</p>
         <div className="flex items-center justify-center my-8">
           <Link to={"/news"} className="underline text-large font-bold">
             Go Back
