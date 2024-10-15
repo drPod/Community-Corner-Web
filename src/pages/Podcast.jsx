@@ -64,7 +64,7 @@ function PodcastsBox({ data }) {
 export default function Podcast() {
   const { isLoading, error, articles } = useArticles(
     "podcasts",
-    4,
+    50,
     "episodeNumber"
   );
   if (error) {

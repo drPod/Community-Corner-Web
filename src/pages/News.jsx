@@ -37,7 +37,7 @@ function NewsBox({ data }) {
 function News() {
   const { isLoading, error, articles } = useArticles(
     "newsArticles",
-    10,
+    50,
     "articleNumber"
   );
   if (error) {
