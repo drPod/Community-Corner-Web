@@ -4,18 +4,19 @@ import {
   faSpotify,
 } from "@fortawesome/free-brands-svg-icons";
 
-import {
-  faEnvelope
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Helmet } from "react-helmet-async";
 
 export default function ContactUs() {
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>Community Chronicle Contact Us</title>
-        <link rel="canonical" href="/contact us" ></link>
-        <meta name="description" content="The Community Chronicle's 170 staffers come from 50 nationalities across 35 cities. The Community Chronicle not only unites individuals across the U.S. and globally, but we also offer opportunities in everything from journalism to podcasting to entrepreneurial experiences." />
+        <link rel="canonical" href="/contact us"></link>
+        <meta
+          name="description"
+          content="The Community Chronicle's 170 staffers come from 50 nationalities across 35 cities. The Community Chronicle not only unites individuals across the U.S. and globally, but we also offer opportunities in everything from journalism to podcasting to entrepreneurial experiences."
+        />
       </Helmet>
       <div>
         <div>
@@ -23,94 +24,103 @@ export default function ContactUs() {
 
           <div className="about-section">
             <div>
-              <h3 className="sub-heading">Contact Our Staff</h3>
-              <p className="ml-10 mr-5">The Community Chronicle's 170 staffers come from 50 nationalities 
-                across 35 cities. The Community Chronicle not only unites individuals 
-                across the U.S. and globally, but we also offer opportunities in everything 
-                from journalism to podcasting to entrepreneurial experiences.
-              </p >
-                <br/>
-              <p className="ml-10 mr-5"> Our diverse team supports members in improving their skills to become 
-                future leaders and explore their personal passions in social justice and 
-                creativity through various media.
-              </p>
+              <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
+                Contact Our Staff
+                <br />
+                <hr />
+              </h1>
+              <h1 className="leftText font-playfair font-[400] text-xl  mt-4">
+                The Community Chronicle's 170 staffers come from 50
+                nationalities across 35 cities. The Community Chronicle not only
+                unites individuals across the U.S. and globally, but we also
+                offer opportunities in everything from journalism to podcasting
+                to entrepreneurial experiences.
+                <br />
+                <br />
+                Our diverse team supports members in improving their skills to
+                become future leaders and explore their personal passions in
+                social justice and creativity through various media.
+              </h1>
             </div>
           </div>
 
           <div className="about-section-left">
             <div>
-              <h3 className="sub-heading text-left">Main Contact:</h3>
-              <p className="ml-10 mr-5 text-left">
-              <a 
+              <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
+                Main Contact:
+                <br />
+                <hr />
+              </h1>
+              <h1 className="leftText font-playfair font-[400] text-xl  mt-4">
+                <a
                   target="_blank"
-                  href="thecommunitychronicle@gmail.com"
+                  href="mailto:thecommunitychronicle@gmail.com"
                   title="Instagram"
                   rel="noreferrer"
-              >
+                >
                   <FontAwesomeIcon fontSize={20} icon={faEnvelope} />
-                  &nbsp;&nbsp;thecommunitychronicle@gmail.com
-              </a>
-              </p>
-
-              <p className="ml-10 mr-5 text-left">
-              <a 
+                  thecommunitychronicle@gmail.com
+                </a>
+                <p></p>
+                <a
                   target="_blank"
                   href="https://www.instagram.com/community_chronicle/"
                   title="Instagram"
                   rel="noreferrer"
-              >
+                >
                   <FontAwesomeIcon fontSize={20} icon={faInstagramSquare} />
-                  &nbsp;&nbsp;@community_chronicle
-              </a>
-              </p>
+                  @community_chronicle
+                </a>
 
-              <p className="ml-10 mr-5 text-left">
-              <a 
+                <p></p>
+                <a
                   target="_blank"
                   href="https://www.instagram.com/communitycorner_podcast/"
                   title="Instagram"
                   rel="noreferrer"
-              >
+                >
                   <FontAwesomeIcon fontSize={20} icon={faInstagramSquare} />
-                  &nbsp;&nbsp;@communitycornerpodcast
-              </a>
-              </p>
+                  @communitycornerpodcast
+                </a>
 
-              <p className="ml-10 mr-5 text-left">
-              <a 
+                <p></p>
+                <a
                   target="_blank"
                   href="https://open.spotify.com/show/1JKtqyhc7KoiYLg9hfP34I"
                   title="Instagram"
                   rel="noreferrer"
-              >
+                >
                   <FontAwesomeIcon fontSize={20} icon={faSpotify} />
-                  &nbsp;&nbsp;Community Corner Spotify
-              </a>
-              </p>
+                  Community Corner Spotify
+                </a>
+              </h1>
             </div>
           </div>
 
           <div className="about-section-left">
             <div>
-              <h3 className="sub-heading">CEO</h3>
-              <p className="ml-10 mr-5 text-left"> Nikhil Kotta
-              </p>
-              <p className="ml-10 mr-5 text-left"> 
-              <a 
+              <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
+                CEO
+                <br />
+                <hr />
+              </h1>
+              <h1 className="leftText font-playfair font-[400] text-xl  mt-4">
+                {" "}
+                Nikhil Kotta
+                <p></p>
+                <a
                   target="_blank"
-                  href="nikhilkotta@gmail.com"
+                  href="mailto:nikhilkotta@gmail.com"
                   title="Instagram"
                   rel="noreferrer"
-              >
+                >
                   <FontAwesomeIcon fontSize={20} icon={faEnvelope} />
-                nikhilkotta@gmail.com
-
-              </a>
-              </p>
-              <br/>
+                  nikhilkotta@gmail.com
+                </a>
+              </h1>
+              <br />
             </div>
           </div>
-
         </div>
       </div>
     </>
