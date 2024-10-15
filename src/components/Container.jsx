@@ -1,3 +1,3 @@
 export default function Container(props) {
-  return <div className="w-screen h-screen max-w-full ">{props.children}</div>;
+  return <div className="w-screen h-1/6 max-w-full ">{props.children}</div>;
 }

@@ -1,19 +1,5 @@
 /* eslint-disable react/prop-types */
-import imgAkhil from "./../assets/cc_profile_imgs/Akhil.png";
-import imgHrishik from "./../assets/cc_profile_imgs/Hrishik.png";
-import imgLokesh from "./../assets/cc_profile_imgs/Lokesh.png";
-import imgNikhilK from "./../assets/cc_profile_imgs/Nikhil_K.png";
-import imgNikhil from "./../assets/cc_profile_imgs/Nikhil.png";
-import imgNischal from "./../assets/cc_profile_imgs/Nischal.png";
-import imgAnish from "./../assets/cc_profile_imgs/Anish.png";
-import imgArnav from "./../assets/cc_profile_imgs/Arnav.png";
-import imgJordan from "./../assets/cc_profile_imgs/Jordan.png";
-import imgOlivia from "./../assets/cc_profile_imgs/Olivia.png";
-import imgPuneeth from "./../assets/cc_profile_imgs/Puneeth.png";
-import imgRashmi from "./../assets/cc_profile_imgs/Rashmi.png";
-import imgSaanvi from "./../assets/cc_profile_imgs/Saanvi.png";
-import imgTanush from "./../assets/cc_profile_imgs/Tanush.png";
-import imgPlaceholder from "./../assets/cc_profile_imgs/placeholder.png";
+
 
 function ProfileCard({ name, position, imgPath, className }) {
   return (
