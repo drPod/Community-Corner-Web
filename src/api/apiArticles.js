@@ -1,13 +1,21 @@
 import { supabase, supabaseUrl } from "./supabase";
 
-export async function getArticles() {
-  let { data: newsArticles, error } = await supabase
-    .from("newsArticles")
-    .select("*");
-
+export async function getArticles(
+  articleType,
+  maxCount,
+  orderByColumn,
+  notNullColumn
+) {
+  let { data: articles, error } = await supabase
+    .from(articleType)
+    .select("*")
+    .limit(maxCount)
+    .order(orderByColumn, { ascending: true });
+  //.not(notNullColumn, "is", null)
+  //.not(notNullColumn, "eq", "")
   if (error) throw new Error(error.message);
 
-  return { newsArticles };
+  return { articles };
 }
 
 export async function createEditArticles(newArticle, id) {

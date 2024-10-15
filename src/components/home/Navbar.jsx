@@ -1,11 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faFacebook,
-  faSpotify,
-} from "@fortawesome/free-brands-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../assets/Logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -25,128 +17,378 @@ function Navbar() {
     "masthead",
     "diversity and inclusion",
     "contact us",
-    "write for us"
+    "write for us",
   ];
   function handleClick() {
     setShowMenu((e) => !e);
   }
 
   function onFormSubmit() {
-    window.location.href="/src/pages/Searcher.jsx";
+    window.location.href = "/src/pages/Searcher.jsx";
   }
 
   return (
-    <header className="w-full flex flex-col items-center justify-center bg-[#fff] py-4 border-y-8 border-[#53B161] transition-all duration-300">
-      <span className="font-playfair text-xl mx-auto">{currentDate}</span>
-      <nav className="flex justify-between items-center py-4 px-8">
-        <div className="w-[33%] flex justify-center text-slate-900">
-          {!showMenu ? (
-            <button onClick={handleClick}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-8 h-8 fill-stone-900"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </button>
-          ) : null}
-
-          {showMenu ? (
-            <div className="flex flex-col justify-center items-center absolute top-0 left-0 h-screen w-screen gap-6 font-medium text-3xl bg-[rgba(255,255,255,0.75)] backdrop-blur-md z-10 text-stone-900">
-              <Link to="/" onClick={handleClick} className="hover:underline">
-                HOME
-              </Link>
-              {links.map((link) => (
-                <Link
-                  to={`/${link}`}
-                  key={link}
-                  className="hover:underline"
-                  onClick={handleClick}
-                >
-                  {" "}
-                  {link.toUpperCase()}
-                </Link>
-              ))}
-              <Link
-                to="/login"
-                onClick={handleClick}
-                className="hover:underline"
-              >
-                SIGN IN / JOIN
-              </Link>
-            </div>
-          ) : null}
-          {showMenu ? (
-            <button className=" z-20" onClick={handleClick}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-8 h-8 fill-stone-900"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          ) : null}
-        </div>
-        <img
-          src={logo}
-          alt="logo"
-          className="w-[15%] cursor-pointer"
-          onClick={() => navigate("/")}
-        />
-        
-        <div className="w-[33%] flex gap-x-3 text-slate-900 justify-center items-center">
-          <a
-            target="_blank"
-            href="https://www.instagram.com/community_chronicle/"
-            title="Instagram"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon fontSize={20} icon={faInstagram} />
-          </a>
-
-          <a href="#" title="Facebook">
-            <FontAwesomeIcon fontSize={20} icon={faFacebook} />
-          </a>
-          <a 
-            target="_blank"
-            href="https://open.spotify.com/show/1JKtqyhc7KoiYLg9hfP34I  "
-            title="Instagram"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon fontSize={20} icon={faSpotify} />
-
-          </a>
-          <div className="container" >
-
-            <form onSubmit={onFormSubmit}>
-              <input type="text" placeholder="search anything" name="q" />
+    <div id="wrapper">
+      <div className="collapse top-search" id="collapseExample">
+        <div className="card card-block">
+          <div className="newsletter-widget text-center">
+            <form className="form-inline">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="What you are looking for?"
+              />
+              <button type="submit" className="btn btn-primary">
+                <i className="fa fa-search"></i>
+              </button>
             </form>
-
+          </div>
         </div>
+      </div>
 
-        <a href="/Searcher" title="Searcher">
-            <FontAwesomeIcon fontSize={20} icon={faSearch} />
-          </a>
+      <div className="topbar-section">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-4 col-md-6 col-sm-6 hidden-xs-down">
+              <div className="topsocial">
+                <a
+                  href="#"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Facebook"
+                >
+                  <i className="fa fa-facebook"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/community_chronicle/"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Instagram"
+                >
+                  <i className="fa fa-instagram"></i>
+                </a>
+                <a
+                  href="https://open.spotify.com/show/1JKtqyhc7KoiYLg9hfP34I"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Spotify"
+                >
+                  <i className="fa fa-spotify"></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="col-lg-4 hidden-md-down">
+              <div className="topmenu text-center">
+                <div className="logo">
+                  <a href="/">
+                    <img src="Logo.png" width="60" height="60" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-       
-      </nav>
-    </header>
+      </div>
+
+      <header className="header">
+        <div className="container">
+          <nav className="navbar navbar-inverse navbar-toggleable-md">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#cloapediamenu"
+              aria-controls="cloapediamenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="navbar-collapse justify-content-md-center"
+              id="cloapediamenu"
+            >
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a className="nav-link color-pink-hover" href="/">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link color-pink-hover" href="/about">
+                    About
+                  </a>
+                </li>
+                <li className="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="/news"
+                    id="dropdown01"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    News
+                  </a>
+                  <ul
+                    className="dropdown-menu megamenu"
+                    aria-labelledby="dropdown01"
+                  >
+                    <li>
+                      <div className="mega-menu-content clearfix">
+                        <div className="tab-details clearfix">
+                          <div id="cat01" className="tabcontent active">
+                            <div className="row">
+                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                <div className="blog-box">
+                                  <div className="post-media">
+                                    <a href="single.html" title="">
+                                      <img
+                                        src="upload/menu_01.jpg"
+                                        alt=""
+                                        className="img-fluid"
+                                      />
+                                      <div className="hovereffect"></div>
+                                      <span className="menucat">Spa</span>
+                                    </a>
+                                  </div>
+                                  <div className="blog-meta">
+                                    <h4>
+                                      <a href="single.html" title="">
+                                        Top 10+ care advice for your toenails
+                                      </a>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                <div className="blog-box">
+                                  <div className="post-media">
+                                    <a href="single.html" title="">
+                                      <img
+                                        src="upload/menu_02.jpg"
+                                        alt=""
+                                        className="img-fluid"
+                                      />
+                                      <div className="hovereffect"></div>
+                                      <span className="menucat">Beauty</span>
+                                    </a>
+                                  </div>
+                                  <div className="blog-meta">
+                                    <h4>
+                                      <a href="single.html" title="">
+                                        The secret of your beauty is handmade
+                                        soap
+                                      </a>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                <div className="blog-box">
+                                  <div className="post-media">
+                                    <a href="single.html" title="">
+                                      <img
+                                        src="upload/menu_03.jpg"
+                                        alt=""
+                                        className="img-fluid"
+                                      />
+                                      <div className="hovereffect"></div>
+                                      <span className="menucat">Beauty</span>
+                                    </a>
+                                  </div>
+                                  <div className="blog-meta">
+                                    <h4>
+                                      <a href="single.html" title="">
+                                        Benefits of face mask made from mud
+                                      </a>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                <div className="blog-box">
+                                  <div className="post-media">
+                                    <a href="single.html" title="">
+                                      <img
+                                        src="upload/menu_04.jpg"
+                                        alt=""
+                                        className="img-fluid"
+                                      />
+                                      <div className="hovereffect"></div>
+                                      <span className="menucat">Spa</span>
+                                    </a>
+                                  </div>
+                                  <div className="blog-meta">
+                                    <h4>
+                                      <a href="single.html" title="">
+                                        Relax with the unique warmth of candle
+                                        flavor
+                                      </a>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="/podcast"
+                    id="dropdown01"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Podcast
+                  </a>
+                  <ul
+                    className="dropdown-menu megamenu"
+                    aria-labelledby="dropdown01"
+                  >
+                    <li>
+                      <div className="mega-menu-content clearfix">
+                        <div className="tab-details clearfix">
+                          <div id="cat01" className="tabcontent active">
+                            <div className="row">
+                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                <div className="blog-box">
+                                  <div className="post-media">
+                                    <a href="single.html" title="">
+                                      <img
+                                        src="upload/menu_01.jpg"
+                                        alt=""
+                                        className="img-fluid"
+                                      />
+                                      <div className="hovereffect"></div>
+                                      <span className="menucat">Spa</span>
+                                    </a>
+                                  </div>
+                                  <div className="blog-meta">
+                                    <h4>
+                                      <a href="single.html" title="">
+                                        Top 10+ care advice for your toenails
+                                      </a>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                <div className="blog-box">
+                                  <div className="post-media">
+                                    <a href="single.html" title="">
+                                      <img
+                                        src="upload/menu_02.jpg"
+                                        alt=""
+                                        className="img-fluid"
+                                      />
+                                      <div className="hovereffect"></div>
+                                      <span className="menucat">Beauty</span>
+                                    </a>
+                                  </div>
+                                  <div className="blog-meta">
+                                    <h4>
+                                      <a href="single.html" title="">
+                                        The secret of your beauty is handmade
+                                        soap
+                                      </a>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                <div className="blog-box">
+                                  <div className="post-media">
+                                    <a href="single.html" title="">
+                                      <img
+                                        src="upload/menu_03.jpg"
+                                        alt=""
+                                        className="img-fluid"
+                                      />
+                                      <div className="hovereffect"></div>
+                                      <span className="menucat">Beauty</span>
+                                    </a>
+                                  </div>
+                                  <div className="blog-meta">
+                                    <h4>
+                                      <a href="single.html" title="">
+                                        Benefits of face mask made from mud
+                                      </a>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                <div className="blog-box">
+                                  <div className="post-media">
+                                    <a href="single.html" title="">
+                                      <img
+                                        src="upload/menu_04.jpg"
+                                        alt=""
+                                        className="img-fluid"
+                                      />
+                                      <div className="hovereffect"></div>
+                                      <span className="menucat">Spa</span>
+                                    </a>
+                                  </div>
+                                  <div className="blog-meta">
+                                    <h4>
+                                      <a href="single.html" title="">
+                                        Relax with the unique warmth of candle
+                                        flavor
+                                      </a>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link color-pink-hover" href="/masthead">
+                    Masthead
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a
+                    className="nav-link color-pink-hover"
+                    href="/diversity and inclusion"
+                  >
+                    Diversity & Inclusion
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link color-pink-hover" href="/contact us">
+                    Contact Us
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link color-pink-hover" href="/write for us">
+                    Write for us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div className="dmtop">Scroll to Top</div>
+    </div>
   );
 }
 

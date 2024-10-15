@@ -168,7 +168,7 @@ export default function Dashboard() {
 
   let check = false;
 
-  if (!articles.newsArticles.length) check = true;
+  if (!articles.articles.length) check = true;
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -268,7 +268,7 @@ export default function Dashboard() {
                           <div>Author</div>
                         </header>
                         <div>
-                          {articles.newsArticles.map((e) => (
+                          {articles.articles.map((e) => (
                             <ItemRow data={e} key={e.id} />
                           ))}
                         </div>

@@ -18,7 +18,7 @@ import { Helmet } from "react-helmet-async";
 function loadPodcast(name, link, type) {
   let useImage;
   if (type == "pf") {
-     useImage = personalFinance;
+    useImage = personalFinance;
   } else if (type == "tis") {
     useImage = techInSociety;
   } else if (type == "eceh") {
@@ -28,47 +28,63 @@ function loadPodcast(name, link, type) {
   } else if (type == "snpBF") {
     useImage = snpBehavioralFinance;
   } else {
-     useImage = economicCartography;
+    useImage = economicCartography;
   }
 
   return (
-    <>
-      <Helmet>
-        <title>Community Chronicle Podcasts</title>
-        <link rel="canonical" href="/podcast" ></link>
-        <meta name="description" content="Community Chronicle Podcasts" />
-      </Helmet>
-      <div class="news-section" id="podcastNames"> 
-        <a href={link}>
-          <img class = "podcast" src={useImage} href={"https://open.spotify.com/show/" + link} alt="Podcast" />
+    <div class="news-section" id="podcastNames">
+      <a href={link}>
+        <img
+          class="podcast"
+          src={useImage}
+          href={"https://open.spotify.com/show/" + link}
+          alt="Podcast"
+        />
+      </a>
+      <div>
+        <h3>{name}</h3>
+        <a
+          class="button"
+          target="_blank"
+          href={"https://open.spotify.com/show/" + link}
+          title="Instagram"
+          rel="noreferrer"
+        >
+          {" "}
+          Check out here
         </a>
-        <div>
-            <h3>{name}</h3>
-            <a
-              class ="button"
-              target="_blank"
-              href={"https://open.spotify.com/show/" + link}
-              title="Instagram"
-              rel="noreferrer"
-            > Check out here</a>
-        </div>
-        <a></a>
-        <div>
-            <iframe class="border-radius:12px" src={"https://open.spotify.com/embed/show/" + link} width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            
-        </div>
       </div>
-    </>
+      <a></a>
+      <div>
+        <iframe
+          class="border-radius:12px"
+          src={"https://open.spotify.com/embed/show/" + link}
+          width="110%"
+          height="100"
+          frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
   );
-
 }
 
 export default function Podcast() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Community Chronicle Podcasts</title>
+        <link rel="canonical" href="/podcast"></link>
+        <meta name="description" content="Community Chronicle Podcasts" />
+      </Helmet>
       <div>
-        <h1 class="news-heading" href="https://youtube.com" >Podcast </h1>
-        <h1 class="news-heading">
+        <div>
+          <h1 class="news-heading" href="https://youtube.com">
+            Podcast{" "}
+          </h1>
+          <h1 class="news-heading">
             <a
               target="_blank"
               href="https://youtube.com"
@@ -77,18 +93,38 @@ export default function Podcast() {
             >
               <FontAwesomeIcon fontSize={50} icon={faYoutube} />
             </a>
-        </h1>
+          </h1>
 
-        <div class="news-column">
-          <div>
-            {loadPodcast("Podcast Number five", "1JKtqyhc7KoiYLg9hfP34I", "pf")}
-            {loadPodcast("Podcast Number Zero", "1JKtqyhc7KoiYLg9hfP34I", "pf")}
-            {loadPodcast("Podcast Number One", "1JKtqyhc7KoiYLg9hfP34I", "pf")}
-            {loadPodcast("Podcast Number Two", "1JKtqyhc7KoiYLg9hfP34I", "snpBF")}
-            {loadPodcast("Podcast Number Two", "1JKtqyhc7KoiYLg9hfP34I", "none")}
-          
-          <div>
-            {/* <div class="news-section" id="podcastNames">
+          <div class="news-column">
+            <div>
+              {loadPodcast(
+                "Podcast Number five",
+                "1JKtqyhc7KoiYLg9hfP34I",
+                "pf"
+              )}
+              {loadPodcast(
+                "Podcast Number Zero",
+                "1JKtqyhc7KoiYLg9hfP34I",
+                "pf"
+              )}
+              {loadPodcast(
+                "Podcast Number One",
+                "1JKtqyhc7KoiYLg9hfP34I",
+                "pf"
+              )}
+              {loadPodcast(
+                "Podcast Number Two",
+                "1JKtqyhc7KoiYLg9hfP34I",
+                "snpBF"
+              )}
+              {loadPodcast(
+                "Podcast Number Two",
+                "1JKtqyhc7KoiYLg9hfP34I",
+                "none"
+              )}
+
+              <div>
+                {/* <div class="news-section" id="podcastNames">
             <div class="news-image">Enter image</div>
               <div>
                 <h3>Podcast #1</h3>
@@ -123,19 +159,19 @@ export default function Podcast() {
                 <button class="news-button">Read More</button>
               </div>
             </div> */}
-          </div>
-
-          </div>
-          <div class="list-column">
-            <h1 class="list-heading">Exciting Podcasts</h1>
-            <ul>
-              <li>Number 1</li>
-              <li>Number 2</li>
-              <li>Number 3</li>
-            </ul>
+              </div>
+            </div>
+            <div class="list-column">
+              <h1 class="list-heading">Exciting Podcasts</h1>
+              <ul>
+                <li>Number 1</li>
+                <li>Number 2</li>
+                <li>Number 3</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

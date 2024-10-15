@@ -3,7 +3,12 @@ import { useArticles } from "../api/useArticles";
 import Loader from "../ui/Loader";
 
 function NewsView() {
-  const { isLoading, error, articles } = useArticles();
+  const { isLoading, error, articles } = useArticles(
+    "newsArticles",
+    1,
+    "id",
+    "img"
+  );
   const { id } = useParams();
   if (error) {
     return (
@@ -21,7 +26,7 @@ function NewsView() {
     );
   }
 
-  const data = articles.newsArticles.filter((e) => e.id == id)[0];
+  const data = articles.articles.filter((e) => e.id == id)[0];
   const heading = data.heading;
   const content = data.content;
   const img = data.img;

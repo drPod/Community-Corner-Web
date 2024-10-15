@@ -1,0 +1,27 @@
+.podcastHomeImage {
+  height: 200px;
+  width: 200px;
+}
+
+.newsHomeImage {
+  height: 70%;
+  width: 70%;
+}
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 150px;
+}
+.homeColWidth {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+h5,
+.h5 {
+  font-size: 1.5rem;
+}

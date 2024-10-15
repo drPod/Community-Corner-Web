@@ -8,7 +8,10 @@ import { Helmet } from "react-helmet-async";
 function NewsBox({ data }) {
   const heading = data.heading;
   const content = data.content;
-  const img = (data.img == null) ? "" : supabaseUrl + "/storage/v1/object/public/article-images/" + data.img;
+  const img =
+    data.img == null
+      ? ""
+      : supabaseUrl + "/storage/v1/object/public/article-images/" + data.img;
   const author = data.author;
   const id = data.id;
 
@@ -16,7 +19,7 @@ function NewsBox({ data }) {
     <>
       <Helmet>
         <title>Community Chronicle News</title>
-        <link rel="canonical" href="/news" ></link>
+        <link rel="canonical" href="/news"></link>
         <meta name="description" content="News from Community Chronicle" />
       </Helmet>
       <div className="bg-gray-100 rounded-md border-[#98d0a0] border-8 text-green-900">
@@ -39,7 +42,12 @@ function NewsBox({ data }) {
 }
 
 function News() {
-  const { isLoading, error, articles } = useArticles();
+  const { isLoading, error, articles } = useArticles(
+    "newsArticles",
+    10,
+    "id",
+    "img"
+  );
   if (error) {
     return (
       <h2 className="text-center mt-4 text-red-600">
@@ -58,7 +66,7 @@ function News() {
 
   return (
     <div className="grid grid-cols-1 py-16 gap-x-5 gap-y-24 my-20 max-w-[80%] sm:max-w-[65%] lg:max-w-[50%] mx-auto">
-      {articles.newsArticles.map((e) => (
+      {articles.articles.map((e) => (
         <NewsBox data={e} key={e.id} />
       ))}
     </div>
