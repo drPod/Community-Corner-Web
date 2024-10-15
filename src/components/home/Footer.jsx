@@ -29,7 +29,7 @@ function Footer() {
             </div>
           </div>
           <div>
-            <div className="flex flex-col justify-center items-center gap-2 font-medium text-xl text-[#fff] sm:grid sm:grid-cols-2 sm:justify-items-center sm:gap-x-7 sm:gap-y-5 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-4 lg:flex-row xl:flex xl:flex-row">
+            <div className="flex flex-col justify-center items-center gap-2 font-medium text-xl text-[#53B161] sm:grid sm:grid-cols-2 sm:justify-items-center sm:gap-x-7 sm:gap-y-5 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-4 lg:flex-row xl:flex xl:flex-row">
               <Link to="/" className="hover:underline">
                 HOME
               </Link>

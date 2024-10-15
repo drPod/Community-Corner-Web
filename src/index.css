@@ -69,10 +69,10 @@
 }
 
 #about-heading {
-  font-size: 60pt;
+  font-size: 50pt;
   text-align: center;
   margin: 20px;
-  border: 1px solid black;
+  /* height: 140px; */
   background-color: #3ba556;
 }
 
@@ -92,8 +92,10 @@
 }
 
 .sub-sub-heading {
-  font-size: 20pt;
-  margin-left: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 23pt;
+  margin-left: 50px;
   text-decoration: underline;
 }
 
@@ -146,13 +148,19 @@ img.podcast {
   height: 300px;
 }
 
+h1.leftText {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 hr {
   color: red;
   background-color: black;
   height: 4px;
-  width: 90%;
   margin: auto;
   margin-top: 1%;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .news-button {
