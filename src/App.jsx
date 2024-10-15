@@ -49,6 +49,10 @@ function App() {
           element: <About />,
         },
         {
+          path: "/about",
+          element: <About />,
+        },
+        {
           path: "news",
           element: <News />,
         },
