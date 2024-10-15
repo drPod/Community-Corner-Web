@@ -65,8 +65,7 @@ export default function HomePodcastsBox() {
   const { isLoading, error, articles } = useArticles(
     "podcasts",
     4,
-    "episodeNumber",
-    "heading"
+    "episodeNumber"
   );
   if (error) {
     return (

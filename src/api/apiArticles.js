@@ -1,18 +1,11 @@
 import { supabase, supabaseUrl } from "./supabase";
 
-export async function getArticles(
-  articleType,
-  maxCount,
-  orderByColumn,
-  notNullColumn
-) {
+export async function getArticles(articleType, maxCount, orderByColumn) {
   let { data: articles, error } = await supabase
     .from(articleType)
     .select("*")
     .limit(maxCount)
-    .order(orderByColumn, { ascending: true });
-  //.not(notNullColumn, "is", null)
-  //.not(notNullColumn, "eq", "")
+    .order(orderByColumn, { ascending: false });
   if (error) throw new Error(error.message);
 
   return { articles };

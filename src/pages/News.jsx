@@ -45,8 +45,7 @@ function News() {
   const { isLoading, error, articles } = useArticles(
     "newsArticles",
     10,
-    "id",
-    "img"
+    "articleNumber"
   );
   if (error) {
     return (

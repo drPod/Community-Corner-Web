@@ -6,8 +6,7 @@ function NewsView() {
   const { isLoading, error, articles } = useArticles(
     "newsArticles",
     1,
-    "id",
-    "img"
+    "articleNumber"
   );
   const { id } = useParams();
   if (error) {

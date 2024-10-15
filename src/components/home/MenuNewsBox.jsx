@@ -3,12 +3,12 @@ import Loader from "../../ui/Loader";
 import { Link } from "react-router-dom";
 import { supabaseUrl } from "../../api/supabase";
 
-function NewsBox({ data }) {
+function NewsBox({ data, index }) {
   const heading = data.heading;
   const content = data.content;
   const img =
     data.img == null
-      ? ""
+      ? "/images/newsImages/city-default" + (index + 1) + ".jpg"
       : supabaseUrl + "/storage/v1/object/public/article-images/" + data.img;
   const author = data.author;
   const id = data.id;
@@ -39,8 +39,7 @@ export default function MenuNewsBox() {
   const { isLoading, error, articles } = useArticles(
     "newsArticles",
     4,
-    "id",
-    "img"
+    "articleNumber"
   );
   if (error) {
     return (
@@ -60,9 +59,9 @@ export default function MenuNewsBox() {
 
   return (
     <>
-      {articles.articles.map((e) => (
+      {articles.articles.map((e, index) => (
         <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-          <NewsBox data={e} key={e.id} />
+          <NewsBox data={e} key={e.id} index={index} />
         </div>
       ))}
     </>
