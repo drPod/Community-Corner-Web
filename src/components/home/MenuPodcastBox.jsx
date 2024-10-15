@@ -5,27 +5,26 @@ import { supabaseUrl } from "../../api/supabase";
 
 function NewsBox({ data }) {
   const heading = data.heading;
-  const content = data.content;
-  const img =
-    data.img == null
-      ? ""
-      : supabaseUrl + "/storage/v1/object/public/article-images/" + data.img;
+  const type = data.type;
+  const spotifyId = data.spotifyId;
+  const img = getImage(type);
   const author = data.author;
   const id = data.id;
+  const spotifyLink = "https://open.spotify.com/embed/episode/" + spotifyId;
 
   return (
     <>
       <div className="blog-box">
         <div className="post-media">
-          <a href={"/news/" + id} title="">
+          <a href={spotifyLink} title="">
             <img src={img} alt="" className="newsHomeImage" />
             <div className="hovereffect"></div>
-            <span className="menucat">News</span>
+            <span className="menucat">Podcast</span>
           </a>
         </div>
         <div className="blog-meta">
           <h4>
-            <a href={"/news/" + id} title="">
+            <a href={spotifyLink} title="">
               {heading}
             </a>
           </h4>
@@ -33,14 +32,29 @@ function NewsBox({ data }) {
       </div>
     </>
   );
+
+  function getImage(type) {
+    switch (type) {
+      case "Personal Finance":
+        return "/images/podcastImages/personalFinance.png";
+      case "S&P 500":
+        return "/images/podcastImages/snpOGEdition.png";
+      case "ECEH":
+        return "/images/podcastImages/economicCartography.png";
+      case "Tech in society":
+        return "/images/podcastImages/techInSociety.png";
+      default:
+        return "/images/podcastImages/personalFinance.png";
+    }
+  }
 }
 
-export default function MenuNewsBox() {
+export default function MenuPodcastsBox() {
   const { isLoading, error, articles } = useArticles(
-    "newsArticles",
+    "podcasts",
     4,
-    "id",
-    "img"
+    "episodeNumber",
+    "heading"
   );
   if (error) {
     return (

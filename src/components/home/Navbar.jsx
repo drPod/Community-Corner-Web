@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import MenuNewsBox from "./MenuNewsBox";
-
+import MenuPodcastsBox from "./MenuPodcastBox";
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const currentDate = new Date().toLocaleDateString("en-US", {
@@ -159,99 +159,7 @@ function Navbar() {
                         <div className="tab-details clearfix">
                           <div id="cat01" className="tabcontent active">
                             <div className="row">
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <img
-                                        src="upload/menu_01.jpg"
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Spa</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Top 10+ care advice for your toenails
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <img
-                                        src="upload/menu_02.jpg"
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Beauty</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        The secret of your beauty is handmade
-                                        soap
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <img
-                                        src="upload/menu_03.jpg"
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Beauty</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Benefits of face mask made from mud
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <img
-                                        src="upload/menu_04.jpg"
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Spa</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Relax with the unique warmth of candle
-                                        flavor
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
+                              <MenuPodcastsBox />
                             </div>
                           </div>
                         </div>
