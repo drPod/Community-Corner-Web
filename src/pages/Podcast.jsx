@@ -1,77 +1,89 @@
 import * as React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faFacebook,
-  faSpotify,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useArticles } from "../api/useArticles";
+import Loader from "../ui/Loader";
 
-import personalFinance from "./../assets/podcastImages/personalFinance.png";
-import techInSociety from "./../assets/podcastImages/techInSociety.png";
-import economicCartography from "./../assets/podcastImages/economicCartography.png";
-import snpOGEdition from "./../assets/podcastImages/snpOGEdition.png";
-import snpBehavioralFinance from "./../assets/podcastImages/snpBehavioralFinance.png";
 import { Helmet } from "react-helmet-async";
-
-function loadPodcast(name, link, type) {
-  let useImage;
-  if (type == "pf") {
-    useImage = personalFinance;
-  } else if (type == "tis") {
-    useImage = techInSociety;
-  } else if (type == "eceh") {
-    useImage = economicCartography;
-  } else if (type == "snpOG") {
-    useImage = snpOGEdition;
-  } else if (type == "snpBF") {
-    useImage = snpBehavioralFinance;
-  } else {
-    useImage = economicCartography;
-  }
+function PodcastsBox({ data }) {
+  const heading = data.heading;
+  const type = data.type;
+  const spotifyId = data.spotifyId;
+  const img = getImage(type);
+  const author = data.author;
+  const id = data.id;
 
   return (
-    <div class="news-section" id="podcastNames">
-      <a href={link}>
-        <img
-          class="podcast"
-          src={useImage}
-          href={"https://open.spotify.com/show/" + link}
-          alt="Podcast"
-        />
-      </a>
-      <div>
-        <h3>{name}</h3>
-        <a
-          class="button"
-          target="_blank"
-          href={"https://open.spotify.com/show/" + link}
-          title="Instagram"
-          rel="noreferrer"
-        >
-          {" "}
-          Check out here
-        </a>
+    <>
+      <div class="blog-box">
+        <div class="blog-meta big-meta">
+          <h4>
+            <a
+              href={"https://open.spotify.com/embed/episode/" + spotifyId}
+              title=""
+            >
+              {heading}
+            </a>
+          </h4>
+          <div>
+            <iframe
+              src={"https://open.spotify.com/embed/episode/" + spotifyId}
+              width="100%"
+              height="200"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <small>
+            <a href="/podcast" title="">
+              Podcasts
+            </a>
+          </small>
+          <small>by {author}</small>
+        </div>
       </div>
-      <a></a>
-      <div>
-        <iframe
-          class="border-radius:12px"
-          src={"https://open.spotify.com/embed/show/" + link}
-          width="110%"
-          height="100"
-          frameBorder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
-      </div>
-    </div>
-  );
-}
 
+      <hr class="invis" />
+    </>
+  );
+
+  function getImage(type) {
+    switch (type) {
+      case "Personal Finance":
+        return "/images/podcastImages/personalFinance.png";
+      case "S&P 500":
+        return "/images/podcastImages/snpOGEdition.png";
+      case "ECEH":
+        return "/images/podcastImages/economicCartography.png";
+      case "Tech in society":
+        return "/images/podcastImages/techInSociety.png";
+      default:
+        return "/images/podcastImages/personalFinance.png";
+    }
+  }
+}
 export default function Podcast() {
+  const { isLoading, error, articles } = useArticles(
+    "podcasts",
+    4,
+    "episodeNumber"
+  );
+  if (error) {
+    return (
+      <h2 className="text-center mt-4 text-red-600">
+        There was error loading articles! {error.message}
+      </h2>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <div className="h-screen flex items-center justify-center bg-gray-50">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <>
       <Helmet>
@@ -81,94 +93,11 @@ export default function Podcast() {
       </Helmet>
       <div>
         <div>
-          <h1 class="news-heading" href="https://youtube.com">
-            Podcast{" "}
-          </h1>
-          <h1 class="news-heading">
-            <a
-              target="_blank"
-              href="https://youtube.com"
-              title="Youtube"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon fontSize={50} icon={faYoutube} />
-            </a>
-          </h1>
-
-          <div class="news-column">
-            <div>
-              {loadPodcast(
-                "Podcast Number five",
-                "1JKtqyhc7KoiYLg9hfP34I",
-                "pf"
-              )}
-              {loadPodcast(
-                "Podcast Number Zero",
-                "1JKtqyhc7KoiYLg9hfP34I",
-                "pf"
-              )}
-              {loadPodcast(
-                "Podcast Number One",
-                "1JKtqyhc7KoiYLg9hfP34I",
-                "pf"
-              )}
-              {loadPodcast(
-                "Podcast Number Two",
-                "1JKtqyhc7KoiYLg9hfP34I",
-                "snpBF"
-              )}
-              {loadPodcast(
-                "Podcast Number Two",
-                "1JKtqyhc7KoiYLg9hfP34I",
-                "none"
-              )}
-
-              <div>
-                {/* <div class="news-section" id="podcastNames">
-            <div class="news-image">Enter image</div>
-              <div>
-                <h3>Podcast #1</h3>
-                <p>Podcast description</p>
-                <button class="news-button">Read More</button>
-              </div>
-            </div>
-
-            <div class="news-section">
-              <div class="news-image">Enter image</div>
-              <div>
-                <h3>Podcast #2</h3>
-                <p>Podcast description</p>
-                <button class="news-button">Read More</button>
-              </div>
-            </div>
-
-            <div class="news-section">
-              <div class="news-image">Enter image</div>
-              <div>
-                <h3>Podcast #3</h3>
-                <p>Podcast description</p>
-                <button class="news-button">Read More</button>
-              </div>
-            </div>
-
-            <div class="news-section">
-              <div class="news-image">Enter image</div>
-              <div>
-                <h3>Podcast #4</h3>
-                <p>Podcast description</p>
-                <button class="news-button">Read More</button>
-              </div>
-            </div> */}
-              </div>
-            </div>
-            <div class="list-column">
-              <h1 class="list-heading">Exciting Podcasts</h1>
-              <ul>
-                <li>Number 1</li>
-                <li>Number 2</li>
-                <li>Number 3</li>
-              </ul>
-            </div>
+          <h1 id="about-heading">Podcasts</h1>
+          <div className="grid grid-cols-1 py-16 gap-x-5 gap-y-24 my-20 max-w-[80%] sm:max-w-[65%] lg:max-w-[50%] mx-auto">
+            {articles.articles.map((e) => (
+              <PodcastsBox data={e} key={e.id} />
+            ))}
           </div>
         </div>
       </div>

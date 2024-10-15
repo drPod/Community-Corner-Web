@@ -16,28 +16,21 @@ function NewsBox({ data }) {
   const id = data.id;
 
   return (
-    <>
-      <Helmet>
-        <title>Community Chronicle News</title>
-        <link rel="canonical" href="/news"></link>
-        <meta name="description" content="News from Community Chronicle" />
-      </Helmet>
-      <div className="bg-gray-100 rounded-md border-[#98d0a0] border-8 text-green-900">
-        <div className="flex items-center justify-center">
-          <img src={img} className="max-w-10" />
-        </div>
-        <div className="p-8">
-          <h2 className="my-3 font-extrabold text-2xl">{heading}</h2>
-          <p className="my-3 font-light">By {author}</p>
-          <p className="my-3">
-            {content.substring(0, 250)}........{" "}
-            <Link to={`${id}`} className="font-bold underline">
-              Read More
-            </Link>
-          </p>
-        </div>
+    <div className="bg-gray-100 rounded-md border-[#98d0a0] border-8 text-green-900">
+      <div className="flex items-center justify-center">
+        <img src={img} className="max-w-10" />
       </div>
-    </>
+      <div className="p-8">
+        <h2 className="my-3 font-extrabold text-2xl">{heading}</h2>
+        <p className="my-3 font-light">By {author}</p>
+        <p className="my-3">
+          {content.substring(0, 250)}........{" "}
+          <Link to={`${id}`} className="font-bold underline">
+            Read More
+          </Link>
+        </p>
+      </div>
+    </div>
   );
 }
 
@@ -64,11 +57,22 @@ function News() {
   }
 
   return (
-    <div className="grid grid-cols-1 py-16 gap-x-5 gap-y-24 my-20 max-w-[80%] sm:max-w-[65%] lg:max-w-[50%] mx-auto">
-      {articles.articles.map((e) => (
-        <NewsBox data={e} key={e.id} />
-      ))}
-    </div>
+    <>
+      <Helmet>
+        <title>Community Chronicle News</title>
+        <link rel="canonical" href="/news"></link>
+        <meta name="description" content="News from Community Chronicle" />
+      </Helmet>
+      <div>
+        <h1 id="about-heading">News</h1>
+        <div className="grid grid-cols-1 py-16 gap-x-5 gap-y-24 my-20 max-w-[80%] sm:max-w-[65%] lg:max-w-[50%] mx-auto">
+          {articles.articles.map((e) => (
+            <NewsBox data={e} key={e.id} />
+          ))}
+        </div>
+      </div>
+      >
+    </>
   );
 }
 
