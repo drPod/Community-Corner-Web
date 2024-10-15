@@ -388,7 +388,7 @@ div.tab button:hover {
   border-left: medium none;
   display: none;
   float: left;
-  padding: 2rem 1.5rem 0;
+  padding: 1.25rem 1.25rem 1.25rem;
   width: 100%;
 }
 
