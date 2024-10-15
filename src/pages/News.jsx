@@ -71,7 +71,6 @@ function News() {
           ))}
         </div>
       </div>
-      >
     </>
   );
 }

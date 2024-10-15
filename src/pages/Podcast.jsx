@@ -10,39 +10,38 @@ function PodcastsBox({ data }) {
   const img = getImage(type);
   const author = data.author;
   const id = data.id;
-
+  const link = "https://open.spotify.com/embed/episode/" + spotifyId;
   return (
     <>
-      <div class="blog-box">
-        <div class="blog-meta big-meta">
-          <h4>
-            <a
-              href={"https://open.spotify.com/embed/episode/" + spotifyId}
-              title=""
-            >
-              {heading}
-            </a>
-          </h4>
-          <div>
-            <iframe
-              src={"https://open.spotify.com/embed/episode/" + spotifyId}
-              width="100%"
-              height="200"
-              frameBorder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </div>
+      <div class="news-section el-content-wrapper" id="podcastNames">
+        <a href="">
+          <img class="podcast" src={img} href={link} alt="Podcast" />
+        </a>
+        <div>
+          <h2>
+            <b>
+              <a href={link} title="">
+                {heading}
+              </a>
+            </b>
+          </h2>
           <small>
-            <a href="/podcast" title="">
-              Podcasts
-            </a>
+            By <i>{author}</i>
           </small>
-          <small>by {author}</small>
+          <br></br>
+          <br />
+          <iframe
+            class="border-radius:12px"
+            src={link}
+            width="110%"
+            height="230"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
-
       <hr class="invis" />
     </>
   );
@@ -94,7 +93,7 @@ export default function Podcast() {
       <div>
         <div>
           <h1 id="about-heading">Podcasts</h1>
-          <div className="grid grid-cols-1 py-16 gap-x-5 gap-y-24 my-20 max-w-[80%] sm:max-w-[65%] lg:max-w-[50%] mx-auto">
+          <div className="podcastsDiv  mx-auto">
             {articles.articles.map((e) => (
               <PodcastsBox data={e} key={e.id} />
             ))}
