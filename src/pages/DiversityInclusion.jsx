@@ -15,7 +15,7 @@ export default function DiversityInclusion() {
         <div>
           <h1 id="about-heading">Diversity and Inclusion</h1>
           <section class="section">
-            <div class="container">
+            <div class="containerText">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="page-wrapper">

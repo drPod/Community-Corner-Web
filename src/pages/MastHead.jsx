@@ -13,7 +13,7 @@ function MastHead() {
         <div>
           <h1 id="about-heading">Meet our team!</h1>
           <section class="section">
-            <div class="container">
+            <div class="containerText">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="page-wrapper"></div>

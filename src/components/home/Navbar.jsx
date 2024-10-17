@@ -85,7 +85,7 @@ function Navbar() {
       </div>
 
       <header className="header">
-        <div className="container">
+        <div className="containerText">
           <nav className="navbar navbar-inverse navbar-toggleable-md">
             <button
               className="navbar-toggler"

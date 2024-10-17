@@ -16,7 +16,7 @@ export default function About() {
         <div>
           <h1 id="about-heading">About Us</h1>
           <section class="section">
-            <div class="container">
+            <div className="containerText">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="page-wrapper">

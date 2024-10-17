@@ -14,7 +14,7 @@ function Footer() {
   return (
     <>
       <footer class="footer">
-        <div class="container">
+        <div class="containerText">
           <div class="row">
             <div class="col-lg-8 offset-lg-2">
               <div class="widget">
