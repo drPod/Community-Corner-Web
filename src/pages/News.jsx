@@ -35,11 +35,7 @@ function NewsBox({ data }) {
 }
 
 function News() {
-  const { isLoading, error, articles } = useArticles(
-    "newsArticles",
-    50,
-    "articleNumber"
-  );
+  const { isLoading, error, articles } = useArticles("newsArticles", 50, "id");
   if (error) {
     return (
       <h2 className="text-center mt-4 text-red-600">

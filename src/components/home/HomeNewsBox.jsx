@@ -42,11 +42,7 @@ function NewsBox({ data, index }) {
 }
 
 export default function HomeNewsBox() {
-  const { isLoading, error, articles } = useArticles(
-    "newsArticles",
-    4,
-    "articleNumber"
-  );
+  const { isLoading, error, articles } = useArticles("newsArticles", 4, "id");
   if (error) {
     return (
       <h2 className="text-center mt-4 text-red-600">
