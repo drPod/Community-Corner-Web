@@ -23,7 +23,6 @@ export default function Home() {
     <>
       <Helmet>
         <title>Community Chronicle Home</title>
-        <link rel="canonical" href="/"></link>
         <meta
           name="description"
           content="Student Run News Organization. Filled with thousands of meaningful and unique articles for your everyday knowledge, enjoyment, and ease!"

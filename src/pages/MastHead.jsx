@@ -1,30 +1,14 @@
-/* eslint-disable react/prop-types */
-
-function ProfileCard({ name, position, imgPath, className }) {
-  return (
-    <div
-      className={`shadow-xl border-8 border-[#98d0a0] rounded-xl max-w-xl ${className}`}
-    >
-      <img src={imgPath} />
-      <div className=" flex flex-col justify-center items-center py-7 gap-4">
-        <h2 className="text-3xl text-center font-playfair font-bold text-[#112313]">
-          {name}
-        </h2>
-        <div className="flex flex-col items-center justify-center text-center">
-          {position.split("\n").map((e) => (
-            <h3 className="text-xl font-playfair font-[500]" key={e}>
-              {e}
-            </h3>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
+import { Helmet } from "react-helmet-async";
 function MastHead() {
   return (
     <>
+      <Helmet>
+        <title>Community Chronicle : Masthead</title>
+        <meta
+          name="description"
+          content="Community Chronicle: Nikhil Kotta, Kunal Shah, Nikhil Chepuri, Manil Shangle, Jordan Davis, Hrishik Gogineni"
+        />
+      </Helmet>
       <div>
         <div>
           <h1 id="about-heading">Meet our team!</h1>

@@ -5,8 +5,11 @@ export default function WriteForUs() {
     <>
       <Helmet>
         <title>Community Chronicle Write for us</title>
-        <link rel="canonical" href="/write for us"></link>
-        <meta name="description" content="Community Chronicle Write for us" />
+
+        <meta
+          name="description"
+          content="Community Chronicle: Submit an article, multimedia content, submissions, economic cartography, gender equity, humanities"
+        />
       </Helmet>
       <div>
         <div>

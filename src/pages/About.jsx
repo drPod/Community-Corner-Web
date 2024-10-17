@@ -8,7 +8,7 @@ export default function About() {
         <link rel="canonical" href="/about"></link>
         <meta
           name="description"
-          content="About us: What is community corner?, Who are we?, What do we publish?, History of Community Corner"
+          content="Community Chronicle About us: Op-eds, economic cartography, socioeconomic inequalities, female veterans, low-income women, economic challenges, financial literacy, equity, 170 people, 50 nationalities, 35 cities"
         />
       </Helmet>
 

@@ -12,10 +12,9 @@ export default function ContactUs() {
     <>
       <Helmet>
         <title>Community Chronicle Contact Us</title>
-        <link rel="canonical" href="/contact us"></link>
         <meta
           name="description"
-          content="The Community Chronicle's 170 staffers come from 50 nationalities across 35 cities. The Community Chronicle not only unites individuals across the U.S. and globally, but we also offer opportunities in everything from journalism to podcasting to entrepreneurial experiences."
+          content="Community Chronicle: Contact Us: Nikhil Kotta, Contact our staff, staffers. The Community Chronicle's 170 staffers come from 50 nationalities across 35 cities. The Community Chronicle not only unites individuals across the U.S. and globally, but we also offer opportunities in everything from journalism to podcasting to entrepreneurial experiences."
         />
       </Helmet>
       <div>
