@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 
-
 function ProfileCard({ name, position, imgPath, className }) {
   return (
     <div
@@ -26,95 +25,189 @@ function ProfileCard({ name, position, imgPath, className }) {
 function MastHead() {
   return (
     <>
-      <h1 id="about-heading" className="font-playfair">
-        Meet our team!
-      </h1>
-      <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
-        C-Suite
-        <br/>
-        <hr/>
-      </h1>
-      {/* <div className=" p-16 mb-8 gap-y-8 sm:grid-cols-2 sm:gap-x-8 xl:px-40 sm:px-32 2xl:px-80 justify-items-center xl:grid-cols-3"> */}
-      <h1 className="font-playfair font-[400] text-2xl text-center mt-4">
-      CEO: Nikhil Kotta <br/>
-      CTO: Kunal Shah <br/>
-      CFO: Nikhil Chepuri <br/>
-      COO: Manil Shangle <br/>
-      CCO: Jordan Davis <br/>
-      CIO: Hrishik Gogineni <br/>
-      </h1>
-      {/* </div> */}
-      <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
-        Web and Social Media
-        <br/>
-        <hr/>
-      </h1>
-      <h1 className="font-playfair font-[400] text-2xl text-center mt-4">
-      Aditiya Poduval - Instagram Editor <br/>
-      Aleeza - Instagram Editor <br/>
-      Kashish Agarwal - Instagram Editor <br/>
-      Nikhil Chepuri - Tiktok Lead <br/>
-      Nischal - Tiktok Editor <br/>
-      Rohan - Instagram Editor <br/>
-      Saanvi Konduru - Instagram Lead <br/>
-      Shivani - Tiktok Editor <br/>
-      Shivanshi Rohatgi - Instagram Editor <br/>
-      Tanush Chauhan - Website Lead <br/>
-      Visvesh Arun - Tiktok Editor <br/>
-      </h1>
-
-      <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
-        Podcast Staff
-        <br/>
-        <hr/>
-      </h1>
-      <h1 className="font-playfair font-[400] text-2xl text-center mt-4">
-      Aarush - Podcast Co-host <br/>
-      Akhil Tadala - Podcast Video Editor <br/>
-      Arnav Senapathi - Podcast Co-Host <br/>
-      Darsh Poddar - Podcast Co-host <br/>
-      Hrishik - Podcast Co-host <br/>
-      Insiya - Podcast Co-host <br/>
-      Jagruth Kallepalli - Podcast Video Editor <br/>
-      Jordan Davis - Podcast Video Editor <br/>
-      Lokesh Penugonda - Podcast Transcriptor<br/>
-      Nikhil Kotta -  Podcast Co-host <br/>
-      Olivia - Podcast Co-host <br/>
-      Prithvi - Podcast Co-host <br/>
-      Rashmi - Podcast Co-host <br/>
-      Sanyam - Podcast Co-Host<br/>
-      Smarran Manchala - Podcast Co-host<br/>
-      Venkatesh - Podcast Co-host <br/>
-      </h1>
-
-      <h1 className="font-playfair font-[700] text-4xl mt-20 text-center">
-        Newspaper Staff
-        <br/>
-        <hr/>
-      </h1>
-      <h1 className="font-playfair font-[400] text-2xl text-center mt-4 ">
-      Aarav - Medicine Paper Editor<br/>
-      Aarush Nigam - Behavioral Economics Paper Editor<br/>
-      Aditya Singh - Engineering Paper Editor<br/>
-      Advaith Sridhar - Psychology Paper Editor<br/>
-      Anish  - Computer Science Paper Editor<br/>
-      Hrishik Gogineni-Finance/Investing Paper Editor<br/>
-      Jordan Davis - Psychology Paper Editor<br/>
-      Kiruthick - Technology Paper Editor<br/>
-      Lokesh - Economics Paper Editor<br/>
-      Manil Shagle - Computer Science Paper Editor<br/>
-      Owen Hart - Current Events Paper Editor<br/>
-      Puneeth Kolla - Computer Science Paper Editor<br/>
-      Sai Raghav Ganesh - Economics Paper Editor<br/>
-      Sanjay Vontala - Medicine Paper Editor<br/>
-      Srikar Desu - Engineering Paper Editor<br/>
-      Sushanth Siddareddygari - Medicine Paper Editor<br/>
-      Tarun Muddasani - Engineering Paper Editor<br/>
-      Tejus Golakoti - Military & International Relations Paper Editor<br/>
-        <br/><br/>
-      </h1>
-     
-      
+      <div>
+        <div>
+          <h1 id="about-heading">Meet our team!</h1>
+          <section class="section">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="page-wrapper"></div>
+                  <div class="page-wrapper">
+                    <div class="pp">
+                      <h1 className="font-playfair text-3xl ">
+                        C-Suite
+                        <hr className="hrFullWidth" />
+                      </h1>
+                      <br />
+                      <p>
+                        CEO: Nikhil Kotta <br /> <br />
+                        CTO: Kunal Shah <br /> <br />
+                        CFO: Nikhil Chepuri <br /> <br />
+                        COO: Manil Shangle <br /> <br />
+                        CCO: Jordan Davis <br /> <br />
+                        CIO: Hrishik Gogineni <br /> <br />
+                      </p>
+                    </div>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <div class="pp">
+                      <h1 className="font-playfair text-3xl ">
+                        Web and Social Media
+                        <hr className="hrFullWidth" />
+                      </h1>
+                      <br />
+                      <p>
+                        Aditiya Poduval - Instagram Editor <br />
+                        <br />
+                        Aleeza - Instagram Editor <br />
+                        <br />
+                        Kashish Agarwal - Instagram Editor <br />
+                        <br />
+                        Nikhil Chepuri - Tiktok Lead <br />
+                        <br />
+                        Nischal - Tiktok Editor <br />
+                        <br />
+                        Rohan - Instagram Editor <br />
+                        <br />
+                        Saanvi Konduru - Instagram Lead <br />
+                        <br />
+                        Shivani - Tiktok Editor <br />
+                        <br />
+                        Shivanshi Rohatgi - Instagram Editor <br />
+                        <br />
+                        Tanush Chauhan - Website Lead <br />
+                        <br />
+                        Visvesh Arun - Tiktok Editor <br />
+                        <br />
+                      </p>
+                    </div>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <div class="pp">
+                      <h1 className="font-playfair text-3xl ">
+                        Podcast Staff
+                        <hr className="hrFullWidth" />
+                      </h1>
+                      <br />
+                      <p>
+                        Aarush - Podcast Co-host <br />
+                        <br />
+                        Akhil Tadala - Podcast Video Editor <br />
+                        <br />
+                        Arnav Senapathi - Podcast Co-Host <br />
+                        <br />
+                        Darsh Poddar - Podcast Co-host <br />
+                        <br />
+                        Hrishik - Podcast Co-host <br />
+                        <br />
+                        Insiya - Podcast Co-host <br />
+                        <br />
+                        Jagruth Kallepalli - Podcast Video Editor <br />
+                        <br />
+                        Jordan Davis - Podcast Video Editor <br />
+                        <br />
+                        Lokesh Penugonda - Podcast Transcriptor
+                        <br />
+                        <br />
+                        Nikhil Kotta - Podcast Co-host <br />
+                        <br />
+                        Olivia - Podcast Co-host <br />
+                        <br />
+                        Prithvi - Podcast Co-host <br />
+                        <br />
+                        Rashmi - Podcast Co-host <br />
+                        <br />
+                        Sanyam - Podcast Co-Host
+                        <br />
+                        <br />
+                        Smarran Manchala - Podcast Co-host
+                        <br />
+                        <br />
+                        Venkatesh - Podcast Co-host <br />
+                        <br />
+                      </p>
+                    </div>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <div class="pp">
+                      <h1 className="font-playfair text-3xl ">
+                        Newspaper Staff
+                        <hr className="hrFullWidth" />
+                      </h1>
+                      <br />
+                      <p>
+                        Aarav - Medicine Paper Editor
+                        <br />
+                        <br />
+                        Aarush Nigam - Behavioral Economics Paper Editor
+                        <br />
+                        <br />
+                        Aditya Singh - Engineering Paper Editor
+                        <br />
+                        <br />
+                        Advaith Sridhar - Psychology Paper Editor
+                        <br />
+                        <br />
+                        Anish - Computer Science Paper Editor
+                        <br />
+                        <br />
+                        Hrishik Gogineni-Finance/Investing Paper Editor
+                        <br />
+                        <br />
+                        Jordan Davis - Psychology Paper Editor
+                        <br />
+                        <br />
+                        Kiruthick - Technology Paper Editor
+                        <br />
+                        <br />
+                        Lokesh - Economics Paper Editor
+                        <br />
+                        <br />
+                        Manil Shagle - Computer Science Paper Editor
+                        <br />
+                        <br />
+                        Owen Hart - Current Events Paper Editor
+                        <br />
+                        <br />
+                        Puneeth Kolla - Computer Science Paper Editor
+                        <br />
+                        <br />
+                        Sai Raghav Ganesh - Economics Paper Editor
+                        <br />
+                        <br />
+                        Sanjay Vontala - Medicine Paper Editor
+                        <br />
+                        <br />
+                        Srikar Desu - Engineering Paper Editor
+                        <br />
+                        <br />
+                        Sushanth Siddareddygari - Medicine Paper Editor
+                        <br />
+                        <br />
+                        Tarun Muddasani - Engineering Paper Editor
+                        <br />
+                        <br />
+                        Tejus Golakoti - Military & International Relations
+                        Paper Editor
+                        <br />
+                        <br />
+                        <br />
+                      </p>
+                    </div>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </>
   );
 }

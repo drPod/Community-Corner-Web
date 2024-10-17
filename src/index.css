@@ -217,3 +217,22 @@ hr {
   background-color: #04aa6d;
   color: white;
 }
+
+.hrFullWidth {
+  background-color: black;
+  height: 0.5px;
+  margin: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1%;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+p {
+  color: #02194d;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.3em;
+}

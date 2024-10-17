@@ -37,7 +37,7 @@ function NewsView() {
         className="max-w-[95%] pt-8 pb-8 mx-auto xl:max-w-[80%] 2xl:max-w-[65%]"
       ></img>
       <div className="max-w-[95%] xl:max-w-[80%] mx-auto 2xl:max-w-[65%] text-green-900">
-        <h2 className="text-center font-extrabold text-2xl lg:text-4xl">
+        <h2 className="text-center font-extrabold text-3xl lg:text-4xl">
           {heading}
         </h2>
         <p className="text-center py-4 font-light">By {author}</p>
