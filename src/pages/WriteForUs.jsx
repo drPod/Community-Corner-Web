@@ -32,8 +32,8 @@ export default function WriteForUs() {
                         humanities. If you are interested in writing for or
                         working with The Community Chronicle, please contact us
                         at&nbsp;
-                        <a href="mailto:communitycornerpodcast@gmail.com">
-                          communitycornerpodcast@gmail.com
+                        <a href="mailto:thecommunitychronicle@gmail.com">
+                          thecommunitychronicle@gmail.com
                         </a>
                       </p>
                     </div>
@@ -70,8 +70,8 @@ export default function WriteForUs() {
                         short-form video content related to economic cartography
                         and financial equity topics. Interested? Contact us
                         at&nbsp;
-                        <a href="mailto:communitycornerpodcast@gmail.com">
-                          communitycornerpodcast@gmail.com
+                        <a href="mailto:thecommunitychronicle@gmail.com">
+                          thecommunitychronicle@gmail.com
                         </a>
                       </p>
                     </div>
