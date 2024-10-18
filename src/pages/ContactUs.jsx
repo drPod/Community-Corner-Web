@@ -59,7 +59,7 @@ export default function ContactUs() {
                         <a
                           target="_blank"
                           href="mailto:thecommunitychronicle@gmail.com"
-                          title="Instagram"
+                          title="thecommunitychronicle@gmail.com"
                           rel="noreferrer"
                         >
                           <FontAwesomeIcon fontSize={20} icon={faEnvelope} />{" "}
@@ -83,7 +83,7 @@ export default function ContactUs() {
                         <a
                           target="_blank"
                           href="https://www.instagram.com/communitycorner_podcast/"
-                          title="Instagram"
+                          title="Instagram Podcast"
                           rel="noreferrer"
                         >
                           <FontAwesomeIcon
@@ -97,7 +97,7 @@ export default function ContactUs() {
                         <a
                           target="_blank"
                           href="https://open.spotify.com/show/1JKtqyhc7KoiYLg9hfP34I"
-                          title="Instagram"
+                          title="Spotify"
                           rel="noreferrer"
                         >
                           <FontAwesomeIcon fontSize={20} icon={faSpotify} />{" "}
@@ -118,7 +118,7 @@ export default function ContactUs() {
                         <a
                           target="_blank"
                           href="mailto:nikhilkotta@gmail.com"
-                          title="Instagram"
+                          title="nikhilkotta@gmail.com"
                           rel="noreferrer"
                         >
                           <FontAwesomeIcon fontSize={20} icon={faEnvelope} />{" "}
